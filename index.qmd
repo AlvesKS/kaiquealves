@@ -1,0 +1,26 @@
+---
+# title: "alvesks_website"
+toc: true
+---
+
+## Hello, I am Kaique Alves
+
+Welcome to my website!
+
+My name is Kaique Alves, I am a D.Sc candidate in Plant Pathology at Universidade Federal de Viçosa in Brazil.
+
+## Research Interests
+
+I am deeply interested in plant disease epidemiology. I am really into the quantitative aspects of epidemics, such as epidemiological models, stochastic simulations, and using modern statistical approaches to link environmental features to disease intensity and occurrence. 
+
+## Background
+
+My background is in quantitative plant disease epidemiology and applied statistics in agriculture. During my undergraduate as an Agronomy student I had the opportunity to work with plant pathologists, engineers, and mathematicians, from whom I got inspired to work with epidemics. During my graduate (M.Sc and D.Sc) at [Universidade Federal de Viçosa (UFV)](https://www.ufv.br/){target="_blank"} I focused on delving into plant pathology and learning more about epidemiology. I got enveloped in research projects on the epidemiology of several important plant diseases, such as citrus Huanglongbing, soybean rust, Fusarium head blight, Wheat Blast, and white mold. Although I had the chance to learn a little bit about programming during my undergraduate, during graduate school was when I really developed this skill. Today I am I avid R user! 
+ 
+
+
+## Personal
+
+When not sitting in front of a screen programming or writing manuscripts, I am, well, in front of a screen doing other stuffs. I really enjoy playing and watching computer games. I am also really into watching movies and TV shows.
+
+

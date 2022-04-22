@@ -1,0 +1,41 @@
+project:
+  type: website
+  # output-dir: _site
+
+editor: visual
+
+website:
+  title: "Kaique Alves"
+  favicon: "images/photo_circulo.png"
+  image: "images/photo_circulo.png"
+  # cookie-consent: true
+  page-navigation: true
+  opengraph: true
+  open-graph: true
+  twitter-card: 
+    site: "@alvesks_"
+    creator: "@alvesks_"
+    card-style: summary
+  search: 
+    location: navbar
+    type: textbox
+  sidebar:
+    search: true
+    logo: "images/photo_circulo.png"
+    contents:
+      - text: "Home"
+        file: index.qmd
+      - publications.qmd
+      - resources.qmd
+      - about.qmd
+      
+    tools:
+      - icon: twitter
+        href: https://twitter.com/AlvesKS_
+      - icon: github
+        href: https://github.com/AlvesKS
+  page-footer: "This website was created and is maintained by Kaique S Alves © 2022" 
+  
+theme:
+  light: flatly
+  dark: darkly

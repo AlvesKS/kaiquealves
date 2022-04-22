@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kaique Alves",
+    "section": "",
+    "text": "Welcome to my website!\nMy name is Kaique Alves, I am a D.Sc candidate in Plant Pathology at Universidade Federal de Viçosa in Brazil."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Kaique Alves",
+    "section": "Research Interests",
+    "text": "Research Interests\nI am deeply interested in plant disease epidemiology. I am really into the quantitative aspects of epidemics, such as epidemiological models, stochastic simulations, and using modern statistical approaches to link environmental features to disease intensity and occurrence."
+  },
+  {
+    "objectID": "index.html#background",
+    "href": "index.html#background",
+    "title": "Kaique Alves",
+    "section": "Background",
+    "text": "Background\nMy background is in quantitative plant disease epidemiology and applied statistics in agriculture. During my undergraduate as an Agronomy student I had the opportunity to work with plant pathologists, engineers, and mathematicians, from whom I got inspired to work with epidemics. During my graduate (M.Sc and D.Sc) at Universidade Federal de Viçosa (UFV) I focused on delving into plant pathology and learning more about epidemiology. I got enveloped in research projects on the epidemiology of several important plant diseases, such as citrus Huanglongbing, soybean rust, Fusarium head blight, Wheat Blast, and white mold. Although I had the chance to learn a little bit about programming during my undergraduate, during graduate school was when I really developed this skill. Today I am I avid R user!"
+  },
+  {
+    "objectID": "index.html#personal",
+    "href": "index.html#personal",
+    "title": "Kaique Alves",
+    "section": "Personal",
+    "text": "Personal\nWhen not sitting in front of a screen programming or writing manuscripts, I am, well, in front of a screen doing other stuffs. I really enjoy playing and watching computer games. I am also really into watching movies and TV shows."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Research",
+    "section": "",
+    "text": "Publications\n\n* Shared first authorship\nAlves KS, Rothmann LA, Del Ponte EM (2022) Linking climate variables to large-scale spatial pattern and risk of citrus Huanglongbing: a hierarchical Bayesian modeling approach. Phytopathology™, 112: 189-196. https://doi.org/10.1094/PHYTO-05-21-0219-FI\nDel Ponte EM, Cazón LI, Alves KS, Pethybridge SJ, Bock CH (2022) How much do standard area diagrams improve accuracy of visual estimates of the percentage area diseased? A systematic review and meta-analysis. Tropical Plant Pathology. 47: 43–57. https://doi.org/10.1007/s40858-021-00479-5\nDel Ponte EM, Moreira GM, Ward TJ, O’Donnel K, Nicolli CP, Machado FJ, Duffeck MR, Alves KS, et al. (2022) Fusarium graminearum species complex: A bibliographic analysis and web-accessible database for global mapping of species and trichothecene toxin chemotypes. Phytopathology™. First look. https://doi.org/10.1094/PHYTO-06-21-0277-RVW\nLehner MS, Alves KS, Del Ponte EM, Pethybridge SJ (2022) Comparing the Fungicide Sensitivity of Sclerotinia sclerotiorum Using Mycelial Growth and Ascospore Germination Assays. Plant Disease. 106: 360-363. https://doi.org/10.1094/PDIS-06-21-1234-SC\nAlves KS, Del Ponte EM (2021) Analysis and simulation of plant disease progress curves in R: introducing the epifitter package. Phytopathology Research. 3: 22. https://doi.org/10.1186/s42483-021-00098-7\nAlves KS, Guimarães M, Ascari JP, Queiroz MF, Alfenas RF, Mizubuti ESG, Del Ponte EM (2021) RGB-based phenotyping of foliar disease severity under controlled conditions. Tropical Plant Pathology. Early view. https://doi.org/10.1007/s40858-021-00448-y\nAscari JP, Barro JP, Santana FM, Pádua JM, Maciel JLN, […], Alves KS, Del Ponte EM (2021) Sequential Post-heading Applications for Controlling Wheat Blast: A Nine-year Summary of Fungicide Performance in Brazil. Plant Disease, 105: 4051-4059. https://doi.org/10.1094/PDIS-06-21-1183-RE\nBarro JP, Alves KS, Godoy CV, Dias AR, Forcelini CA, Utiamada CM, de Andrade Júnior ER, et al., (2021), Performance of dual and triple fungicide premixes for managing soybean rust across years and regions in Brazil: a meta-analysis. Plant Pathology, 70: 1920-1935. https://doi.org/10.1111/ppa.13418>\nAlves KS, Barro JP, Guimarães M, Del Ponte EM (2021) Profitability of fungicide applications for managing soybean rust in scenarios of variable efficacy and costs: a stochastic simulation. Plant Pathology, 70: 1354-1363. https://doi.org/10.1111/ppa.13396>\nda Silva HAO, Teixeira WD, Borges ÁV, Silva Junior AL, Alves KS, Rodrigues Junior OM, de Abreu LM (2021) Biocontrol of potato early blight and suppression of Alternaria grandis sporulation by Clonostachys spp.. Plant Pathology, 70: 1677-1685. https://doi.org/10.1111/ppa.13402>\nAlves KS, do Carmo LHM, Del Ponte EM (2020) Spatiotemporal spread of huanglongbing in commercial citrus orchards of Minas Gerais, Brazil. Tropical Plant Pathology, 45: 668-679. https://doi.org/10.1007/s40858-020-00398-x>\n*Franceschi VT, Alves KS, Mazaro SM, Godoy CV, Duarte HS, Del Ponte EM (2020). A new standard area diagram set for assessment of severity of soybean rust improves accuracy of estimates and optimizes resource use. Plant Pathology, 69(3): 495-505. https://doi.org/10.1111/ppa.13148\nDuffeck MR, Alves KS, Machado FJ, Esker PD, Del Ponte EM (2020) Modeling yield losses and fungicide profitability for managing Fusarium head blight in Brazilian spring wheat. Phytopathology™, 110(2): 370-378.https://doi.org/10.1094/PHYTO-04-19-0122-R\nAlves KS, Da Rocha, MR, Alves CHA, Polastreli JL. Camara G R, Silva WB, Moraes WB (2018) Modelagem da eficiência do roguing sob diferentes frequências de vistorias e taxas de infecção em epidemias virais do mamoeiro. Scientia Agraria, 19: 180-185.\nCosmi FC, Alves KS, Moraes WB, Ventura JA, Moraes SPCB, Moraes WB, Jesus Júnior WC (2017) Análise epidemiológica da evolução temporal da meleira do mamoeiro. Summa Phytopathologica, 43(4): 303-309. https://dx.doi.org/10.1590/0100-5405/169330\n\n\n\nRepositories"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "Education\nUniversidade Federal de Viçosa | Viçosa, MG, Brazil\n\nD.Sc. in Plant Pathology | August 2019 - Currently\nM.Sc. in Plant Pathology | March 2018 - July 2019\n\nUniversidade Federal de Viçosa | Viçosa, MG, Brazil\n\nB.S. in Agronomy | May 2013 - December 2017\n\n\n\nExperience\nCornell University - Research Intern | November 2021 - Currently"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "This is an R package that provides a set of function for dealing with disease progress curves, including fitting models and simulation epidemics.\n\n\n\nec50estimator provides a quick, easy and automated way of estimating the effective control to 50% of growth inhibition (\\(EC_{50}\\)) from multi-isolate data sets. It also is optimized to deal with stratified data."
+  },
+  {
+    "objectID": "resources.html#shiny-apps",
+    "href": "resources.html#shiny-apps",
+    "title": "Resources",
+    "section": "Shiny apps",
+    "text": "Shiny apps\n\nRusty Profits\nRusty profits is an app that evolved from an work that I conducted on fungicide profitability for managing soybean rust in Brazil. The app can be used to estimate fungicide profitability given the spraying cost, soybean price, and fungicide control efficacy.\n\n\nsimDPC\nSimulate disease progress curved with this app. It is a very good tool for teaching temporal aspects of epidemics, like differing the different types of models used for comparative epidemiology.\n\n\nepidemioBR\nHere is where you can find the Brazilian community of epidemiologist. This an repository showing where and how to find members of our community is located in Brazil. Connect with us!\n\n\nBSPcast¹\nThis is a prototype of a decision support system (DSS) for calculating the risk Stemphylium leaf blight in onion fields located in New York.\n\n\n¹ Under development"
+  },
+  {
+    "objectID": "resources.html#tutorials",
+    "href": "resources.html#tutorials",
+    "title": "Resources",
+    "section": "Tutorials",
+    "text": "Tutorials\n\nvideos (pt-br)\n\nYouTube channel Epidemio Fora da Curva"
+  }
+]

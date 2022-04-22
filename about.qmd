@@ -1,0 +1,36 @@
+---
+title: "About me"
+toc: false
+---
+
+
+
+
+<!-- ::: {.column-margin} -->
+
+<!-- ![](images/photo_circulo.png){width="200" fig-align="right"} -->
+<!-- ::: -->
+### Bio
+Kaique Alves was born in a small town called Boa Esperança in Espírito Santo state in Brazil. He is an Agronomist and D.Sc Plant Pathologist specialized in plant disease epidemiology. His research is focused in quantitative epidemiology with experience in phytopathometry, temporal and spatial dynamics, yield loss, disease management, and environmental effects on epidemics. The methods he has been applied in his research include stochastic simulations, frequentist modeling, Bayesian modeling, and machine learning algorithms. He is also deeply interested in programming and Open Science.
+
+
+### Education
+
+**Universidade Federal de Viçosa** \| Viçosa, MG, Brazil
+
+ - D.Sc. in Plant Pathology \| August 2019 - Currently
+
+ - M.Sc. in Plant Pathology \| March 2018 - July 2019
+
+**Universidade Federal de Viçosa** \| Viçosa, MG, Brazil
+
+ - B.S. in Agronomy \| May 2013 - December 2017
+
+### Experience
+
+**Cornell University** 
+ - Research Intern \| November 2021 - Currently
+
+
+
+
