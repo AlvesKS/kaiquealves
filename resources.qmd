@@ -6,38 +6,35 @@ toc: true
 
 ## Packages
 
-###  [*epifitter*](https://alvesks.github.io/epifitter/){target="_blank"}
+### [*epifitter*](https://alvesks.github.io/epifitter/){target="_blank"}
 
 This is an R package that provides a set of function for dealing with disease progress curves, including fitting models and simulation epidemics.
 
-###  [*ec50estimator*](https://alvesks.github.io/ec50estimator/){target="_blank"}
+### [*ec50estimator*](https://alvesks.github.io/ec50estimator/){target="_blank"}
 
 `ec50estimator` provides a quick, easy and automated way of estimating the effective control to 50% of growth inhibition ($EC_{50}$) from multi-isolate data sets. It also is optimized to deal with stratified data.
 
-
 ## Shiny apps
 
-###   [*Rusty Profits*](https://alvesks.shinyapps.io/rusty-profits/){target="_blank"}
+### [*Rusty Profits*](https://alvesks.shinyapps.io/rusty-profits/){target="_blank"}
 
 `Rusty profits` is an app that evolved from an [work](https://doi.org/10.1111/ppa.13396){target="_blank"} that I conducted on fungicide profitability for managing soybean rust in Brazil. The app can be used to estimate fungicide profitability given the spraying cost, soybean price, and fungicide control efficacy.
 
-###   [*simDPC*](https://alvesks.shinyapps.io/simDPC/){target="_blank"}
+### [*simDPC*](https://alvesks.shinyapps.io/simDPC/){target="_blank"}
 
-Simulate disease progress curved with this app. It is a very good tool for teaching temporal aspects of epidemics, like differing the different types of models used for comparative epidemiology. 
+Simulate disease progress curved with this app. It is a very good tool for teaching temporal aspects of epidemics, like differing the different types of models used for comparative epidemiology.
 
-###   [*epidemioBR*](https://alvesks.shinyapps.io/epidemioBR/){target="_blank"}
+### [*epidemioBR*](https://alvesks.shinyapps.io/epidemioBR/){target="_blank"}
 
-Here is where you can find the Brazilian community of epidemiologist. This an repository showing where  and how to find members of our community is located in Brazil. Connect with us!
+Here is where you can find the Brazilian community of epidemiologist. This an repository showing where and how to find members of our community is located in Brazil. Connect with us!
 
-###   [*BSPcast*¹](https://alvesks.shinyapps.io/BSPcast/){target="_blank"}
+### [*BSPcast*¹](https://alvesks.shinyapps.io/BSPcast/){target="_blank"}
 
-This is a prototype of a decision support system (DSS) for calculating the risk Stemphylium leaf blight in onion fields located in New York. 
+This is a prototype of a decision support system (DSS) for calculating the risk Stemphylium leaf blight in onion fields located in New York.
 
-
-::: {.column-margin}
+::: column-margin
 ¹ Under development
 :::
-
 
 ## Tutorials
 

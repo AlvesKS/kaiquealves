@@ -8,7 +8,7 @@ website:
   title: "Kaique Alves"
   favicon: "images/photo_circulo.png"
   image: "images/photo_circulo.png"
-  # cookie-consent: true
+  site-url: https://kaiquealves.netlify.app
   page-navigation: true
   opengraph: true
   open-graph: true
@@ -27,6 +27,7 @@ website:
         file: index.qmd
       - publications.qmd
       - resources.qmd
+      - docs/blog/index.qmd
       - about.qmd
       
     tools:
