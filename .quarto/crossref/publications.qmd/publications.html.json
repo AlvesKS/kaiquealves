@@ -1,1 +1,1 @@
-{"headings":["sec-publi","shared-first-authorship","sec-repo"],"entries":[{"caption":"Repositories","key":"sec-repo","order":{"number":2,"section":[2,0,0,0,0,0,0]}},{"caption":"Publications","key":"sec-publi","order":{"number":1,"section":[1,0,0,0,0,0,0]}}]}
+{"entries":[{"key":"sec-repo","caption":"Repositories","order":{"section":[2,0,0,0,0,0,0],"number":2}},{"key":"sec-publi","caption":"Publications","order":{"section":[1,0,0,0,0,0,0],"number":1}}],"headings":["sec-publi","shared-first-authorship","sec-repo"]}

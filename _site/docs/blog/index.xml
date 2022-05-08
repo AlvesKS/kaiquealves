@@ -19,7 +19,7 @@
 <generator>quarto-0.9.370</generator>
 <lastBuildDate>Sun, 08 May 2022 04:00:00 GMT</lastBuildDate>
 <item>
-  <title>Fungicide sensibility</title>
+  <title>Sensibilidade de fungos à fungicida no R</title>
   <dc:creator>Kaique Alves</dc:creator>
   <link>https://kaiquealves.netlify.app/docs/blog/posts/ec50.html</link>
   <description><![CDATA[ 
@@ -348,6 +348,7 @@ Warning
 </section>
 
  ]]></description>
+  <category>PT-BR</category>
   <category>plant pathology</category>
   <category>code</category>
   <category>analysis</category>

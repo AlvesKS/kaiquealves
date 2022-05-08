@@ -1,9 +1,10 @@
 ---
-title: "Fungicide sensibility"
-description: "How to estimate ec50 no R"
+title: "Sensibilidade de fungos à fungicida no R"
+description: "Como estimar $EC_{50}$ no R"
 author: "Kaique Alves"
 date: "5/08/2022"
 categories:
+  - PT-BR
   - plant pathology
   - code
   - analysis
