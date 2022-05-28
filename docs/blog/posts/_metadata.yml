@@ -1,0 +1,6 @@
+title-block-banner: "#EDF3F9"
+title-block-banner-color: body
+toc-location: left
+include-after-body:
+  - ../subscribe.html
+search: false

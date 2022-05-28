@@ -12,10 +12,9 @@ categories:
 
 Olá pessoal!
 
-Nesse post eu vou mostrar como estimar a $EC_{50}$ de fungicidas utilizando o `R`. Para aqueles que não sabem, a $EC_{50}$ é a concentração na qual um composto inibe 50% do crescimento de um organismo quando comparado com a testemunha (não tratado). 
+Nesse post eu vou mostrar como estimar a $EC_{50}$ de fungicidas utilizando o `R`. Para aqueles que não sabem, a $EC_{50}$ é a concentração na qual um composto inibe 50% do crescimento de um organismo quando comparado com a testemunha (não tratado).
 
-Na Fitopatologia, a $EC_{50}$ é muito utilizada para avaliar a sensibilidade de fungos a fungicidas. O aumento na $EC_{50}$ de alguns isolados pode indicar a seleção para populações menos sensíveis. 
-
+Na Fitopatologia, a $EC_{50}$ é muito utilizada para avaliar a sensibilidade de fungos a fungicidas. O aumento na $EC_{50}$ de alguns isolados pode indicar a seleção para populações menos sensíveis.
 
 # Carregar os pacotes
 
@@ -34,14 +33,11 @@ library(ggridges)
 
 Primeiramente, precisamos criar um banco de dados para podermos estimar a $EC_{50}$ a partir deles. Para isso, vou utilizar um modelo base para o comportamento de resposta a doses de fungicidas (Noel et al. 2018). Caso você já possua um banco de dados, basta carregar utilizando a função para tal (Veja o [post](https://kaiquealves.netlify.app/post/carregar_dados/carregar_dados/) sobre como carregar dados no R).
 
+$$ f(x) = c +\frac{d-c}{1+exp(b(log(x)-log(e)))}$$
 
+Esse modelo é denominado de Log-logístico de quatro parâmetros `LL.4()`. Ele possui 4 parâmetros que são `b`, `c`, `d`, `e`. O parâmetro `b` é slope da curva no seu ponto de inflexão, `c` é a assíntota inferior da curva, `d` é o limite superior da curva, e `e` é a $EC_{50}$. A variável `x` no modelo significa a dose ou concentração do fungicida. Sendo assim, para cada valor de dose, é possível calcular um valor de crescimento micelial, por exemplo.
 
-
- $$ f(x) = c +\frac{d-c}{1+exp(b(log(x)-log(e)))}$$
-
-Esse modelo é denominado de Log-logístico de quatro parâmetros `LL.4()`. Ele possui 4 parâmetros que são `b`, `c`, `d`, `e`. O parâmetro `b` é slope da curva no seu ponto de inflexão, `c` é a assíntota inferior da curva, `d` é o limite superior da curva, e `e` é a $EC_{50}$. A variável `x` no modelo significa a dose ou concentração do fungicida. Sendo assim, para cada valor de dose, é possível calcular um valor de crescimento micelial, por exemplo. 
-
-Portanto, usando esse modelo e criei uma função para poder gerar valores de crescimento micelial. 
+Portanto, usando esse modelo e criei uma função para poder gerar valores de crescimento micelial.
 
 ```{r}
 grow = function(dose, b,c,d,e){
@@ -56,7 +52,7 @@ grow = function(dose, b,c,d,e){
 
 ```
 
-Abaixo eu mostro um exemplo da utilização dessa função. Eu crio um vetor de doses no qual eu denominei de `doses`. Insiro o vetor da função que criei acima junto com alguns valores que atribui arbitrariamente para os parâmetros. 
+Abaixo eu mostro um exemplo da utilização dessa função. Eu crio um vetor de doses no qual eu denominei de `doses`. Insiro o vetor da função que criei acima junto com alguns valores que atribui arbitrariamente para os parâmetros.
 
 ```{r}
 #criar vetor de dose
@@ -90,9 +86,9 @@ df1 %>%
 
 # Estimando a $EC_{50}$ para um isolado
 
-Para estimar a $EC_{50}$,  antes devemos selecionar o modelo que melhor se ajusta aos dados. Para isso vamos usar a função `drm()` do pacote `drc`. Nessa função precisamos fornecer a formula, que é uma descrição simbólica da equação, que basicamente vai indicar qual é sua coluna com os valores de doses e qual é a coluna que contem os valores de crescimento micelial. No nosso caso a formula será `growth~dose`. Também precisamos indicar qual é o `data.frame` no argumento `data`, no nosso caso `data = df1`. O argumento `fct` é onde você indica qual modelo será utilizado. No nosso caso, vamos utilizar o `LL.4()`. Para saber quais modelos estão disponíveis use a função `getMeanFunctions()`. 
+Para estimar a $EC_{50}$, antes devemos selecionar o modelo que melhor se ajusta aos dados. Para isso vamos usar a função `drm()` do pacote `drc`. Nessa função precisamos fornecer a formula, que é uma descrição simbólica da equação, que basicamente vai indicar qual é sua coluna com os valores de doses e qual é a coluna que contem os valores de crescimento micelial. No nosso caso a formula será `growth~dose`. Também precisamos indicar qual é o `data.frame` no argumento `data`, no nosso caso `data = df1`. O argumento `fct` é onde você indica qual modelo será utilizado. No nosso caso, vamos utilizar o `LL.4()`. Para saber quais modelos estão disponíveis use a função `getMeanFunctions()`.
 
-veja a implementação do modelo. Aqui usamos a função summary para ver as estimativas dos parâmetros e suas estatísticas. 
+veja a implementação do modelo. Aqui usamos a função summary para ver as estimativas dos parâmetros e suas estatísticas.
 
 ```{r}
 model1 = drm(formula = growth~doses,  data = df1, fct = LL.4())
@@ -105,7 +101,6 @@ Veja o gráfico do ajuste
 plot(model1)
 ```
 
-
 Para obter o valor de $EC_{50}$ vamos usar a função `ED`. Nela você precisa indicar o modelo ajustado `model1`. No argumento `respLev` é onde você indica qual o valor de EC que quer estimar. Como queremos 50% (EC50), `respLev=50`. Além disso, no argumento `interval` você também pode indicar se deseja estimar os intervalos de confiança da estimativa media de $EC_{50}$. PAra isso, basta indicar qual tipo de intervalo você deseja Para o modelo `LL.4()` usando `interval= "delta"`.(Nota: Para mais informações sobre intervalos de confiança use `?ED`).
 
 ```{r}
@@ -116,7 +111,7 @@ ED(model1, respLev=50, interval = "delta")
 
 Ótimo, conseguimos estimar a $EC_{50}$ para um isolado. No entanto, muitas vezes vamos precisar estimar para vários isolados. Sendo assim, agora vamos ver como a gente faz para estimar a $EC_{50}$ para uma situação onde temos 100 isolados.
 
-Para isso, vou criar um cenário no qual eu tenho 50 isolados de um fungo hipotético em que metade deles foram coletados em uma lavoura orgânica e a outra metade em uma lavoura convencional. Esses isolados foram submetidos a dois fungicidas diferentes, os quais denominei de `Fungicida A` e `Fungicida B`. 
+Para isso, vou criar um cenário no qual eu tenho 50 isolados de um fungo hipotético em que metade deles foram coletados em uma lavoura orgânica e a outra metade em uma lavoura convencional. Esses isolados foram submetidos a dois fungicidas diferentes, os quais denominei de `Fungicida A` e `Fungicida B`.
 
 Agora vamos criar um `dada.frame` para um `fungicida A` e um para o `fungicida B`.
 
@@ -152,10 +147,9 @@ head(fungicida_A)
 
 ```
 
-
 ## Fungicida B
-Já Para o `fungicida B` eu considerei que os isolados teriam o mesmo padrão de sensibilidade, ou seja, não existe diferença entre as $EC_{50}$.
 
+Já Para o `fungicida B` eu considerei que os isolados teriam o mesmo padrão de sensibilidade, ou seja, não existe diferença entre as $EC_{50}$.
 
 ```{r}
 set.seed(1)
@@ -198,7 +192,6 @@ Existe uma forma em que você pode indicar na função `drm()` que você tem mai
 model = drm(growth~dose, curveid = isolate,  fct = LL.4(), data = fungicida)
 ED(model, 50, interval = "delta")
 ```
-
 
 ```{r eval=FALSE, include=FALSE}
 fct = LL.4()
@@ -254,8 +247,6 @@ box
 
 ```
 
-
-
 ```{r eval=FALSE, include=FALSE}
 estimate_EC50 = function(formula, data, isolate_col, strata_col = NULL, fct,
                          interval = c("none", "delta", "fls", "tfls")){
@@ -308,10 +299,9 @@ box
 }
 ```
 
-
 Sendo assim, eu criei um pacote para facilitar nossa vida.
 
-O nome do pacote é `ec50estimator`. Para instalar esse pacote você vai precisar usar a função `install.packages()`: 
+O nome do pacote é `ec50estimator`. Para instalar esse pacote você vai precisar usar a função `install.packages()`:
 
 ```{r eval=FALSE, include=T}
 install.packages("ec50estimator")
@@ -337,8 +327,7 @@ Assim que instalar o pacote. O próximo passo é carrega-lo no seu script.
 library(ec50estimator)
 ```
 
-A função `estimate_EC50()` é usada para calcular as EC50 para cada isolado dentro de cada sistema de cultivo e para cada fungicida. Assim como na função `drm()`, na `estimate_EC50()` você também precisa fornecer a `formula`. Forneça também no argumento `data` o `data.frame` onde estão seus dados. Indique a coluna que identifica cada isolado no argumento `isolate_col`. Se seus dados são estratificados (por região, sistema de cultivo ou ano, por exemplo) indique as colunas no argumento `strata_col`. Indique o modelo será utilizado no argumento `fct` (mesmos do pacote `drc`). Se você quer que os intervalos de confiança sejam estimados, indique no argumento `interval` (funciona da mesma forma que a função `drm()`). 
-
+A função `estimate_EC50()` é usada para calcular as EC50 para cada isolado dentro de cada sistema de cultivo e para cada fungicida. Assim como na função `drm()`, na `estimate_EC50()` você também precisa fornecer a `formula`. Forneça também no argumento `data` o `data.frame` onde estão seus dados. Indique a coluna que identifica cada isolado no argumento `isolate_col`. Se seus dados são estratificados (por região, sistema de cultivo ou ano, por exemplo) indique as colunas no argumento `strata_col`. Indique o modelo será utilizado no argumento `fct` (mesmos do pacote `drc`). Se você quer que os intervalos de confiança sejam estimados, indique no argumento `interval` (funciona da mesma forma que a função `drm()`).
 
 ```{r}
 df_ec50 = estimate_EC50(growth~dose,
@@ -350,9 +339,8 @@ df_ec50 = estimate_EC50(growth~dose,
 head(df_ec50)
 ```
 
-
-:::{.callout-warning} 
-ATENÇÃO: Neste post, eu usei o mesmo modelo (`LL.4()`) para os dois fungicidas (A e B). No entanto, é importante verificar qual modelo é mais apropriado para seus dados. Para isso, antes de rodar a função `estimate_EC50()` para todos seus dados, use a função `drm()` para ajustar um modelo para alguns isolados e posteriormente utilize a função `mselect()` para calcular as estatísticas que vão te auxiliar a selecionar o melhor modelo. Dica: quanto menor o valor de AIC, melhor o modelo. Mais informações rode o comando `?mselect` no seu Console.
+::: callout-warning
+ATENÇÃO: Neste post, eu usei o mesmo modelo (`LL.4()`) para os dois fungicidas (A e B). No entanto, é importante verificar qual modelo é mais apropriado para seus dados. Para isso, antes de rodar a função `estimate_EC50()` para todos seus dados, use a função `drm()` para ajustar um modelo para alguns isolados e posteriormente utilize a função `mselect()` para calcular as estatísticas que vão te auxiliar a selecionar o melhor modelo. Dica: quanto menor o valor de AIC, melhor o modelo. Para mais informações, rode o comando `?mselect` no seu Console.
 :::
 
 ## Gráficos
@@ -375,7 +363,6 @@ df_ec50 %>%
         legend.position = "bottom")
 ```
 
-
 Use o pacote `ggridges` para criar gráficos de densidade.
 
 ```{r fig.height=5, fig.width=6}
@@ -390,12 +377,6 @@ df_ec50 %>%
   theme(legend.position = "none")
 ```
 
-
-
 # References
 
-Noel, Z. A., Wang, J., and Chilvers, M. I. 2018. Significant Influence of EC 50 Estimation by Model Choice and EC 50 Type. Plant Disease. 102:708–714.
-
-
-
-
+Noel, Z. A., Wang, J., and Chilvers, M. I. 2018. Significant Influence of EC 50 Estimation by Model Choice and EC 50 Type. Plant Disease. 102:708--714.

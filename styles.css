@@ -1,0 +1,39 @@
+.navbar-brand > img {
+  max-height: 36px;
+}
+.gallery-category {
+  column-gap: 10px;
+}
+
+.step {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 70px;
+}
+.step h2 {
+  border-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.step h4 {
+  margin-top: 0;
+}
+
+.tool {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+.tool a[role="button"] {
+  width: 115px;
+  color: rgb(55, 58, 60);
+  text-align: center;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-botoom: 30px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}

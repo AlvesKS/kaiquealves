@@ -28,13 +28,13 @@ Simulate disease progress curved with this app. It is a very good tool for teach
 
 Here is where you can find the Brazilian community of epidemiologist. This an repository showing where and how to find members of our community is located in Brazil. Connect with us!
 
-### [*BSPcast*¹](https://alvesks.shinyapps.io/BSPcast/){target="_blank"}
+<!-- ### [*BSPcast*¹](https://alvesks.shinyapps.io/BSPcast/){target="_blank"} -->
 
-This is a prototype of a decision support system (DSS) for calculating the risk Stemphylium leaf blight in onion fields located in New York.
+<!-- This is a prototype of a decision support system (DSS) for calculating the risk Stemphylium leaf blight in onion fields located in New York. -->
 
-::: column-margin
-¹ Under development
-:::
+<!-- ::: column-margin -->
+<!-- ¹ Under development -->
+<!-- ::: -->
 
 ## Tutorials
 

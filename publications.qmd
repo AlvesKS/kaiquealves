@@ -3,17 +3,15 @@ title: "Research"
 toc: true
 ---
 
-On this page you will find the Publications I have made in the last years in @sec-publi and the research repositories that accompanied some of the publications (@sec-repo)
+On this page you will find the Publications I have made in the last years!
 
 # Publications {#sec-publi}
-
-##### \* Shared first authorship
 
 Alves KS, Rothmann LA, Del Ponte EM (2022) Linking climate variables to large-scale spatial pattern and risk of citrus Huanglongbing: a hierarchical Bayesian modeling approach. Phytopathology™, 112: 189-196. <https://doi.org/10.1094/PHYTO-05-21-0219-FI>
 
 Del Ponte EM, Cazón LI, Alves KS, Pethybridge SJ, Bock CH (2022) How much do standard area diagrams improve accuracy of visual estimates of the percentage area diseased? A systematic review and meta-analysis. Tropical Plant Pathology. 47: 43--57. <https://doi.org/10.1007/s40858-021-00479-5>
 
-Del Ponte EM, Moreira GM, Ward TJ, O'Donnel K, Nicolli CP, Machado FJ, Duffeck MR, Alves KS, et al. (2022) Fusarium graminearum species complex: A bibliographic analysis and web-accessible database for global mapping of species and trichothecene toxin chemotypes. Phytopathology™. First look. <https://doi.org/10.1094/PHYTO-06-21-0277-RVW>
+Del Ponte EM, Moreira GM, Ward TJ, O'Donnel K, Nicolli CP, Machado FJ, Duffeck MR, Alves KS, et al. (2022) Fusarium graminearum species complex: A bibliographic analysis and web-accessible database for global mapping of species and trichothecene toxin chemotypes. Phytopathology™. 112:4, 741-751. <https://doi.org/10.1094/PHYTO-06-21-0277-RVW>
 
 Lehner MS, Alves KS, Del Ponte EM, Pethybridge SJ (2022) Comparing the Fungicide Sensitivity of Sclerotinia sclerotiorum Using Mycelial Growth and Ascospore Germination Assays. Plant Disease. 106: 360-363. <https://doi.org/10.1094/PDIS-06-21-1234-SC>
 
@@ -39,4 +37,4 @@ Alves KS, Da Rocha, MR, Alves CHA, Polastreli JL. Camara G R, Silva WB, Moraes W
 
 Cosmi FC, Alves KS, Moraes WB, Ventura JA, Moraes SPCB, Moraes WB, Jesus Júnior WC (2017) Análise epidemiológica da evolução temporal da meleira do mamoeiro. Summa Phytopathologica, 43(4): 303-309. <https://dx.doi.org/10.1590/0100-5405/169330>
 
-# Repositories {#sec-repo} 
+##### \* Shared first authorship

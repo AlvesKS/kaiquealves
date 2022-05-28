@@ -1,13 +1,43 @@
 ---
-title: "Kaique Alves"
+title: " Hello, I am Kaique Alves!"
 toc: true
 ---
+### **Welcome to my website!**
+![](images/panoramic.jpg){.preview-image}
 
-## Hello, I am Kaique Alves
 
-Welcome to my website!
 
-My name is Kaique Alves, I am a D.Sc candidate in Plant Pathology at Universidade Federal de Viçosa in Brazil.
+I am a D.Sc candidate in Plant Pathology at Universidade Federal de Viçosa in Brazil and Visiting scholar at Cornell Agritech in the US.
+
+::: {.grid .step .column-page-right}
+::: {.g-col-lg-3 .g-col-12}
+
+### Find me elsewhere
+
+::: 
+
+::: {.tool .g-col-lg-9 .g-col-12}
+
+<a href=" https://twitter.com/alvesks_" role="button" target="_blank" class="btn btn-outline-light">
+![](images/Twitter-logo.png){width="77"}Twitter
+</a>
+
+
+<a href="https://github.com/AlvesKS" role="button" target="_blank" class="btn btn-outline-light">
+![](images/github_logo.png){width="77"}GitHub
+</a>
+
+<a href="https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&hl" target="_blank" role="button" class="btn btn-outline-light">
+![](images/google_scholar_logo.png){width="77"}Scholar
+</a>
+
+<a href="https://osf.io/32gp6/" target="_blank" role="button" class="btn btn-outline-light">
+![](images/osf_logo.png){width="77"}OSF
+</a>
+
+
+:::
+:::
 
 ## Research Interests
 
@@ -15,8 +45,8 @@ I am deeply interested in plant disease epidemiology. I am really into the quant
 
 ## Background
 
-My background is in quantitative plant disease epidemiology and applied statistics in agriculture. During my undergraduate as an Agronomy student I had the opportunity to work with plant pathologists, engineers, and mathematicians, from whom I got inspired to work with epidemics. During my graduate (M.Sc and D.Sc) at [Universidade Federal de Viçosa (UFV)](https://www.ufv.br/){target="_blank"} I focused on delving into plant pathology and learning more about epidemiology. I got enveloped in research projects on the epidemiology of several important plant diseases, such as citrus Huanglongbing, soybean rust, Fusarium head blight, Wheat Blast, and white mold. Although I had the chance to learn a little bit about programming during my undergraduate, during graduate school was when I really developed this skill. Today I am I avid R user!
+My background is in quantitative plant disease epidemiology and applied statistics in agriculture. During my undergraduate as an Agronomy student I had the opportunity to work with plant pathologists, engineers, and mathematicians, from whom I got inspired to work with epidemics. During my graduate (M.Sc and D.Sc) at [Universidade Federal de Viçosa (UFV)](https://www.ufv.br/){target="_blank"} I focused on delving into plant pathology and learning more about epidemiology. I got enveloped in research projects on the epidemiology of several important plant diseases, such as citrus Huanglongbing, soybean rust, Fusarium head blight, Wheat Blast, and white mold. Although I had the chance to learn a little bit about programming during my undergraduate, during graduate school was when I really developed this skill. Today I am an avid R user!
 
 ## Personal
 
-When not sitting in front of a screen programming or writing manuscripts, I am, well, in front of a screen doing other stuffs. I really enjoy playing and watching computer games. I am also really into watching movies and TV shows.
+I enjoy playing and watching computer games. I am also really into watching movies and TV shows. Recently I started cycling, which was a challenge in the beginning, but now is one of my favorite outdoor activities.

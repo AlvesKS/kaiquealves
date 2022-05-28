@@ -1,28 +1,30 @@
 project:
   type: website
-  # output-dir: _site
+  output-dir: _site
 
 editor: visual
 
 website:
-  title: "Kaique Alves"
+  # title: ""
   favicon: "images/photo_circulo.png"
-  image: "images/photo_circulo.png"
+  cookie-consent:
+    type: express
+    style: simple 
+    palette: light 
   site-url: https://kaiquealves.netlify.app
   page-navigation: true
-  opengraph: true
   open-graph: true
-  twitter-card: 
-    site: "@alvesks_"
-    creator: "@alvesks_"
-    card-style: summary
+  twitter-card: true
   search: 
     location: navbar
     type: textbox
-  sidebar:
+  navbar:
+    background: light
+    collapse-below: lg
+    title: false
     search: true
-    logo: "images/photo_circulo.png"
-    contents:
+    logo: "images/logo.png"
+    left:
       - text: "Home"
         file: index.qmd
       - publications.qmd
@@ -30,12 +32,28 @@ website:
       - docs/blog/index.qmd
       - about.qmd
       
-    tools:
+      
+    right:
       - icon: twitter
-        href: https://twitter.com/AlvesKS_
+        href: https://twitter.com/alvesks_
+        aria-label: My Twitter
       - icon: github
         href: https://github.com/AlvesKS
-  page-footer: "This website was created and is maintained by Kaique S Alves © 2022" 
+        aria-label: My GitHub
+      
+    tools:
+      # - icon: twitter
+      #   href: https://twitter.com/AlvesKS_
+      # - icon: github
+      #   href: https://github.com/AlvesKS
+  page-footer: "This website was created and is maintained by Kaique S. Alves 2022" 
+  
+format:
+  html:
+    toc: true
+    theme: cosmo
+    css: styles.css
+  
   
 theme:
   light: flatly
