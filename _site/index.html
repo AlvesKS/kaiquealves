@@ -2,29 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.370">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hello, I am Kaique Alves!</title>
+<title>Kaique dos Santos Alves – Kaique Alves</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<link href="./images/photo_circulo.png" rel="icon" type="image/png">
+<meta name="quarto:offset" content="./">
+<link href="./images/foto_kaique_alves.png" rel="icon" type="image/png">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -32,17 +38,22 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bff56f40ef3a076a13420213357a0400.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -51,8 +62,10 @@ ul.task-list{list-style: none;}
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -67,17 +80,23 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"en"
   });
 });
 </script> 
   
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Hello, I am Kaique Alves!">
-<meta property="og:image" content="https:/kaiquealves.netlify.app/images\panoramic.jpg">
-<meta name="twitter:title" content="Hello, I am Kaique Alves!">
-<meta name="twitter:image" content="https:/kaiquealves.netlify.app/images\panoramic.jpg">
+<meta property="og:title" content="Kaique dos Santos Alves – Kaique Alves">
+<meta property="og:description" content="Plant Disease Epidemiologist, Plant Health Scientist, and Quantitative Modeler">
+<meta property="og:image" content="https://kaiquealves.netlify.app/images/panoramic.jpg">
+<meta property="og:site_name" content="Kaique Alves">
+<meta name="twitter:title" content="Kaique dos Santos Alves – Kaique Alves">
+<meta name="twitter:description" content="Plant Disease Epidemiologist, Plant Health Scientist, and Quantitative Modeler">
+<meta name="twitter:image" content="https://kaiquealves.netlify.app/images/panoramic.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -85,113 +104,178 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
-    <img src="./images/logo.png" alt="">
-  </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kaique Alves</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html">Research</a>
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html">Resources</a>
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Tools &amp; Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/blog/index.html">Blog</a>
+    <a class="nav-link" href="./docs/blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About me</a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/alvesks_"><i class="bi bi-twitter" role="img" aria-label="My Twitter">
+    <a class="nav-link" href="mailto:kaiquedsalves@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="Email Kaique Alves">
 </i> 
- </a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/AlvesKS"><i class="bi bi-github" role="img" aria-label="My GitHub">
+    <a class="nav-link" href="https://www.linkedin.com/in/kaique-alves-ab253436/"> <i class="bi bi-linkedin" role="img" aria-label="Kaique Alves on LinkedIn">
 </i> 
- </a>
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/alvesks_"> <i class="bi bi-twitter-x" role="img" aria-label="Kaique Alves on X">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/AlvesKS"> <i class="bi bi-github" role="img" aria-label="Kaique Alves on GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome-to-my-website" id="toc-welcome-to-my-website" class="nav-link active" data-scroll-target="#welcome-to-my-website"><strong>Welcome to my website!</strong></a></li>
-  <li><a href="#research-interests" id="toc-research-interests" class="nav-link" data-scroll-target="#research-interests">Research Interests</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#personal" id="toc-personal" class="nav-link" data-scroll-target="#personal">Personal</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hello, I am Kaique Alves!</h1>
+<h1 class="title">Kaique dos Santos Alves</h1>
+<p class="subtitle lead">Plant Disease Epidemiologist, Plant Health Scientist, and Quantitative Modeler</p>
 </div>
 
 
 
-
-
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
+  
     
   </div>
   
 
+
 </header>
 
-<section id="welcome-to-my-website" class="level3">
-<h3 class="anchored" data-anchor-id="welcome-to-my-website"><strong>Welcome to my website!</strong></h3>
-<p><img src="images/panoramic.jpg" class="preview-image img-fluid"></p>
-<p>I am a D.Sc candidate in Plant Pathology at Universidade Federal de Viçosa in Brazil and Visiting scholar at Cornell Agritech in the US.</p>
+
+<div class="hero-grid">
+<section id="plant-disease-epidemiology-for-better-breeding-and-better-decisions" class="level1 hero-copy">
+<h1>Plant disease epidemiology for better breeding and better decisions</h1>
+<p>I am an Agronomist with M.Sc. and D.Sc. training in Plant Pathology, currently working as a Plant Health Scientist at Bayer Crop Science. My work connects epidemiology, risk assessment, modeling, and data science to practical decisions in plant breeding, crop protection, and sustainable agriculture.</p>
+<div class="hero-actions">
+<p><a href="./publications.html" class="btn btn-primary btn-lg">View research</a> <a href="./resources.html" class="btn btn-outline-primary btn-lg">Explore tools</a> <a href="./about.html" class="btn btn-outline-secondary btn-lg">Read about my work</a></p>
+</div>
+<div class="hero-note">
+<p>Working across disease surveillance, predictive modeling, yield loss analysis, mechanistic simulation, machine learning, and data-driven plant health strategy.</p>
+</div>
 </section>
-<div class="grid step column-page-right">
-<section id="find-me-elsewhere" class="level3 g-col-lg-3 g-col-12">
-<h3 class="anchored" data-anchor-id="find-me-elsewhere">Find me elsewhere</h3>
+<div class="hero-panel">
+<p><img src="images/foto_kaique_alves.png" class="profile-photo img-fluid"></p>
+<section id="at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="at-a-glance">At a glance</h2>
+<ul>
+<li>Plant Health Scientist, Bayer Crop Science</li>
+<li>10+ years in plant disease epidemiology</li>
+<li>R package developer and applied modeler</li>
+</ul>
+<div class="contact-list">
+<p><a href="mailto:kaiquedsalves@gmail.com">kaiquedsalves@gmail.com</a></p>
+<p>+55 27 99748 5098</p>
+<p>Uberlandia, MG, Brazil</p>
+</div>
 </section>
-<div class="tool g-col-lg-9 g-col-12">
-<p><a href=" https://twitter.com/alvesks_" role="button" target="_blank" class="btn btn-outline-light"> <img src="images/Twitter-logo.png" class="img-fluid" width="77">Twitter </a></p>
-<p><a href="https://github.com/AlvesKS" role="button" target="_blank" class="btn btn-outline-light"> <img src="images/github_logo.png" class="img-fluid" width="77">GitHub </a></p>
-<p><a href="https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&amp;hl" target="_blank" role="button" class="btn btn-outline-light"> <img src="images/google_scholar_logo.png" class="img-fluid" width="77">Scholar </a></p>
-<p><a href="https://osf.io/32gp6/" target="_blank" role="button" class="btn btn-outline-light"> <img src="images/osf_logo.png" class="img-fluid" width="77">OSF </a></p>
 </div>
 </div>
-<section id="research-interests" class="level2">
-<h2 class="anchored" data-anchor-id="research-interests">Research Interests</h2>
-<p>I am deeply interested in plant disease epidemiology. I am really into the quantitative aspects of epidemics, such as epidemiological models, stochastic simulations, and using modern statistical approaches to link environmental features to disease intensity and occurrence.</p>
+<section id="research-and-industry-focus" class="level2">
+<h2 class="anchored" data-anchor-id="research-and-industry-focus">Research and industry focus</h2>
+<div class="card-grid">
+<section id="disease-risk-modeling" class="level3 feature-card">
+<h3 class="anchored" data-anchor-id="disease-risk-modeling">Disease risk modeling</h3>
+<p>I develop mechanistic, statistical, and machine learning frameworks to predict disease prevalence, support surveillance, and improve decision-making across breeding and plant health programs.</p>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>My background is in quantitative plant disease epidemiology and applied statistics in agriculture. During my undergraduate as an Agronomy student I had the opportunity to work with plant pathologists, engineers, and mathematicians, from whom I got inspired to work with epidemics. During my graduate (M.Sc and D.Sc) at <a href="https://www.ufv.br/" target="_blank">Universidade Federal de Viçosa (UFV)</a> I focused on delving into plant pathology and learning more about epidemiology. I got enveloped in research projects on the epidemiology of several important plant diseases, such as citrus Huanglongbing, soybean rust, Fusarium head blight, Wheat Blast, and white mold. Although I had the chance to learn a little bit about programming during my undergraduate, during graduate school was when I really developed this skill. Today I am an avid R user!</p>
+<section id="plant-breeding-support" class="level3 feature-card">
+<h3 class="anchored" data-anchor-id="plant-breeding-support">Plant breeding support</h3>
+<p>My work supports strategic decision-making, data collection design, and quantitative plant health priorities for corn and soybean breeding programs across large geographies.</p>
 </section>
-<section id="personal" class="level2">
-<h2 class="anchored" data-anchor-id="personal">Personal</h2>
-<p>I enjoy playing and watching computer games. I am also really into watching movies and TV shows. Recently I started cycling, which was a challenge in the beginning, but now is one of my favorite outdoor activities.</p>
+<section id="quantitative-innovation" class="level3 feature-card">
+<h3 class="anchored" data-anchor-id="quantitative-innovation">Quantitative innovation</h3>
+<p>I build analytical workflows, software tools, and modeling systems that turn research-grade methods into practical tools for teams working in real breeding and commercial contexts.</p>
+</section>
+</div>
+</section>
+<section id="core-strengths" class="level2">
+<h2 class="anchored" data-anchor-id="core-strengths">Core strengths</h2>
+<div class="pill-row">
+<p><code>Plant pathology</code> <code>Epidemiology</code> <code>Risk assessment</code> <code>Disease surveillance</code> <code>Machine learning</code> <code>Bayesian inference</code> <code>Stochastic simulations</code> <code>R programming</code> <code>Data visualization</code> <code>Decision support systems</code> <code>High-throughput phenotyping</code> <code>Project leadership</code></p>
+</div>
+</section>
+<section id="selected-impact" class="level2">
+<h2 class="anchored" data-anchor-id="selected-impact">Selected impact</h2>
+<div class="impact-grid">
+<section id="bayer-crop-science" class="level3 impact-card">
+<h3 class="anchored" data-anchor-id="bayer-crop-science">Bayer Crop Science</h3>
+<p>Led the development of risk-modeling frameworks for breeding pipelines, disease monitoring programs, and decision-support systems that integrate monitoring data, predictive models, and climate outlooks.</p>
+</section>
+<section id="global-collaboration" class="level3 impact-card">
+<h3 class="anchored" data-anchor-id="global-collaboration">Global collaboration</h3>
+<p>Worked across Latin America and global teams on major diseases affecting corn and soybean, including soybean rust, corn stunt, tar spot, and southern corn leaf blight.</p>
+</section>
+<section id="software-and-methods" class="level3 impact-card">
+<h3 class="anchored" data-anchor-id="software-and-methods">Software and methods</h3>
+<p>Developed the <code>epifitter</code> and <code>ec50estimator</code> R packages and several web applications to support data-driven plant pathology, teaching, and applied epidemiological analysis.</p>
+</section>
+</div>
+</section>
+<section id="recent-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="recent-highlights">Recent highlights</h2>
+<ul>
+<li>Plant Health Scientist, Bayer Crop Science, 2024 to present.</li>
+<li>LATAM Risk Assessment Lead at Bayer Crop Science, 2022 to 2024.</li>
+<li>Research Intern in Plant Pathology at Cornell University, 2021 to 2022.</li>
+<li>Author of recent 2025 publications in <em>Plant Pathology</em>, <em>Phytopathology</em>, and <em>Crop Protection</em>.</li>
+</ul>
+</section>
+<section id="connect" class="level2">
+<h2 class="anchored" data-anchor-id="connect">Connect</h2>
+<div class="connect-grid">
+<p><a href="mailto:kaiquedsalves@gmail.com" class="btn btn-outline-dark">Email</a> <a href="https://www.linkedin.com/in/kaique-alves-ab253436/" class="btn btn-outline-dark" target="_blank">LinkedIn</a> <a href="https://github.com/AlvesKS" class="btn btn-outline-dark" target="_blank">GitHub</a> <a href="https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&amp;hl=en" class="btn btn-outline-dark" target="_blank">Google Scholar</a> <a href="https://osf.io/32gp6/" class="btn btn-outline-dark" target="_blank">OSF</a></p>
+</div>
 
 
 </section>
@@ -199,6 +283,24 @@ cookieconsent.run({
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -206,12 +308,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -220,17 +325,76 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/kaiquealves\.netlify\.app");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -240,49 +404,322 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">This website was created and is maintained by Kaique S. Alves 2022<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-left">
+<p>Plant disease epidemiology, risk assessment, and data-driven agriculture.</p>
+</div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+<p>Updated in 2026.</p>
+</div>
   </div>
 </footer>
 
 
 
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

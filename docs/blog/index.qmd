@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-subtitle: News, tips, and tuturials. Content in en-us and pt-br
+subtitle: "Notes, tutorials, and practical ideas in plant disease epidemiology."
 listing:
   sort: "date desc"
   contents: "posts"
@@ -10,7 +10,9 @@ listing:
   feed: true
 page-layout: full
 margin-header: subscribe.html
-title-block-banner: "#EDF3F9"
+title-block-banner: "#E3EDF3"
 title-block-banner-color: body
 search: false
 ---
+
+This space brings together short notes, tutorials, and applied modeling content connected to plant pathology, quantitative epidemiology, and data science.

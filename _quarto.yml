@@ -1,60 +1,63 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - images/panoramic.jpg
 
 editor: visual
 
 website:
-  # title: ""
-  favicon: "images/photo_circulo.png"
+  title: "Kaique Alves"
+  favicon: "images/foto_kaique_alves.png"
   cookie-consent:
     type: express
-    style: simple 
-    palette: light 
+    style: simple
+    palette: light
   site-url: https://kaiquealves.netlify.app
+  description: "Plant disease epidemiology, risk assessment, and quantitative modeling in plant health."
   page-navigation: true
   open-graph: true
   twitter-card: true
-  search: 
+  search:
     location: navbar
     type: textbox
   navbar:
-    background: light
+    background: white
     collapse-below: lg
-    title: false
+    title: "Kaique Alves"
     search: true
-    logo: "images/logo.png"
     left:
-      - text: "Home"
+      - text: "Overview"
         file: index.qmd
-      - publications.qmd
-      - resources.qmd
-      - docs/blog/index.qmd
-      - about.qmd
-      
-      
+      - text: "Research"
+        file: publications.qmd
+      - text: "Tools & Resources"
+        file: resources.qmd
+      - text: "Blog"
+        file: docs/blog/index.qmd
+      - text: "About"
+        file: about.qmd
     right:
-      - icon: twitter
-        href: https://twitter.com/alvesks_
-        aria-label: My Twitter
+      - icon: envelope
+        href: mailto:kaiquedsalves@gmail.com
+        aria-label: Email Kaique Alves
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kaique-alves-ab253436/
+        aria-label: Kaique Alves on LinkedIn
+      - icon: twitter-x
+        href: https://x.com/alvesks_
+        aria-label: Kaique Alves on X
       - icon: github
         href: https://github.com/AlvesKS
-        aria-label: My GitHub
-      
-    tools:
-      # - icon: twitter
-      #   href: https://twitter.com/AlvesKS_
-      # - icon: github
-      #   href: https://github.com/AlvesKS
-  page-footer: "This website was created and is maintained by Kaique S. Alves 2022" 
-  
+        aria-label: Kaique Alves on GitHub
+  page-footer:
+    left: "Plant disease epidemiology, risk assessment, and data-driven agriculture."
+    right: "Updated in 2026."
+
 format:
   html:
     toc: true
-    theme: cosmo
+    theme: flatly
     css: styles.css
-  
-  
-theme:
-  light: flatly
-  dark: darkly
+    smooth-scroll: true
+    link-external-newwindow: true

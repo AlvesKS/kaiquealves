@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kaiquealves.netlify.app/index.html</loc>
-    <lastmod>2022-05-28T18:58:58.841Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kaiquealves.netlify.app/about.html</loc>
-    <lastmod>2022-05-28T18:58:20.008Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kaiquealves.netlify.app/publications.html</loc>
-    <lastmod>2022-05-28T18:58:23.742Z</lastmod>
-  </url>
-  <url>
     <loc>https://kaiquealves.netlify.app/resources.html</loc>
-    <lastmod>2022-05-28T18:58:25.483Z</lastmod>
+    <lastmod>2026-04-12T03:59:53.538Z</lastmod>
   </url>
   <url>
-    <loc>https://kaiquealves.netlify.app/docs/blog/posts/ec50/ec50.html</loc>
-    <lastmod>2022-05-28T18:58:50.698Z</lastmod>
+    <loc>https://kaiquealves.netlify.app/index.html</loc>
+    <lastmod>2026-04-12T03:25:50.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kaiquealves.netlify.app/docs/blog/posts/epifitter-epidemias/epifitter-epidemias.html</loc>
+    <lastmod>2026-04-12T03:59:53.537Z</lastmod>
   </url>
   <url>
     <loc>https://kaiquealves.netlify.app/docs/blog/index.html</loc>
-    <lastmod>2022-05-28T18:58:52.093Z</lastmod>
+    <lastmod>2026-04-12T12:56:29.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kaiquealves.netlify.app/about.html</loc>
+    <lastmod>2026-04-12T03:22:22.564Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kaiquealves.netlify.app/docs/blog/posts/ec50/ec50.html</loc>
+    <lastmod>2026-04-12T04:17:17.108Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kaiquealves.netlify.app/docs/blog/posts/yield-loss/yield-loss.html</loc>
+    <lastmod>2026-04-12T14:31:40.095Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kaiquealves.netlify.app/publications.html</loc>
+    <lastmod>2026-04-12T03:02:22.075Z</lastmod>
   </url>
 </urlset>

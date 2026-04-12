@@ -1,43 +1,43 @@
 ---
-title: "Sensibilidade de fungos à fungicida no R"
-description: "Como estimar $EC_{50}$ no R"
+title: "Fungal sensitivity to fungicides in R"
+description: "How to estimate EC50 in R"
 author: "Kaique Alves"
-date: "5/08/2022"
+date: "2022-05-08"
 categories:
-  - PT-BR
+  - English
   - plant pathology
   - code
   - analysis
 ---
 
-Olá pessoal!
+Hello everyone!
 
-Nesse post eu vou mostrar como estimar a $EC_{50}$ de fungicidas utilizando o `R`. Para aqueles que não sabem, a $EC_{50}$ é a concentração na qual um composto inibe 50% do crescimento de um organismo quando comparado com a testemunha (não tratado).
+In this post I will show how to estimate fungicide $EC_{50}$ values in `R`. In dose-response terms, $EC_{50}$ is the concentration at which a compound inhibits 50% of growth relative to the untreated control.
 
-Na Fitopatologia, a $EC_{50}$ é muito utilizada para avaliar a sensibilidade de fungos a fungicidas. O aumento na $EC_{50}$ de alguns isolados pode indicar a seleção para populações menos sensíveis.
+In plant pathology, $EC_{50}$ is widely used to evaluate fungal sensitivity to fungicides. An increase in $EC_{50}$ for part of a population may indicate selection toward less sensitive isolates.
 
-# Carregar os pacotes
+# Load the packages
 
-Segue abaixo os pacotes que vamos utilizar. O pacote utilizado para estimar a $EC_{50}$ é o `drc`. Caso você não tenha ele instalado, basta você ir no seu Console, colar `install.packages("drc")` e apertar enter que ele será instalado. Caso não tenha os outros pacotes, faça o mesmo para eles, apenas troque o nome dentro do parênteses.
-
-Após ter instalado todos esses pacotes, basta carrega-los da seguinte forma:
+The core model-fitting engine used here is `drc`, which provides several dose-response models. For stratified, multi-isolate workflows, I also recommend the [`ec50estimator`](https://alvesks.github.io/ec50estimator/){target="_blank"} project, which was designed specifically to streamline $EC_{50}$ estimation in plant pathology datasets. If you do not have the packages installed yet, run `install.packages("drc")` in your console and install the others as needed.
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 library(drc)
+library(ec50estimator)
 library(cowplot)
 library(ggridges)
+library(ggthemes)
 ```
 
-# Dados
+# Data
 
-Primeiramente, precisamos criar um banco de dados para podermos estimar a $EC_{50}$ a partir deles. Para isso, vou utilizar um modelo base para o comportamento de resposta a doses de fungicidas (Noel et al. 2018). Caso você já possua um banco de dados, basta carregar utilizando a função para tal (Veja o [post](https://kaiquealves.netlify.app/post/carregar_dados/carregar_dados/) sobre como carregar dados no R).
+First, we need a dataset from which $EC_{50}$ can be estimated. Here I will simulate data using a standard fungicide dose-response relationship (Noel et al. 2018). If you already have your own dataset, you can import it directly in `R` and move to the modeling steps.
 
 $$ f(x) = c +\frac{d-c}{1+exp(b(log(x)-log(e)))}$$
 
-Esse modelo é denominado de Log-logístico de quatro parâmetros `LL.4()`. Ele possui 4 parâmetros que são `b`, `c`, `d`, `e`. O parâmetro `b` é slope da curva no seu ponto de inflexão, `c` é a assíntota inferior da curva, `d` é o limite superior da curva, e `e` é a $EC_{50}$. A variável `x` no modelo significa a dose ou concentração do fungicida. Sendo assim, para cada valor de dose, é possível calcular um valor de crescimento micelial, por exemplo.
+This is the four-parameter log-logistic model, `LL.4()`. Its parameters are `b`, `c`, `d`, and `e`. Parameter `b` is the slope around the inflection point, `c` is the lower asymptote, `d` is the upper asymptote, and `e` corresponds to the $EC_{50}$. Variable `x` represents the fungicide dose or concentration.
 
-Portanto, usando esse modelo e criei uma função para poder gerar valores de crescimento micelial.
+Using this model, we can create a helper function to simulate mycelial growth values.
 
 ```{r}
 grow = function(dose, b,c,d,e){
@@ -49,24 +49,23 @@ grow = function(dose, b,c,d,e){
   growth = rnorm(length(x),y, erro)
   return(growth)
 }
-
 ```
 
-Abaixo eu mostro um exemplo da utilização dessa função. Eu crio um vetor de doses no qual eu denominei de `doses`. Insiro o vetor da função que criei acima junto com alguns valores que atribui arbitrariamente para os parâmetros.
+Below is a simple example. I create a vector of doses called `doses`, simulate growth values, and inspect the resulting data frame.
 
 ```{r}
-#criar vetor de dose
+# create dose vector
 doses = rep(c(0, 1e-6,1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1),5)
-set.seed(1) # Isso aqui faz que os valores simulados sejam sempre os mesmos.
+set.seed(1) # keeps the simulated values reproducible
 
-#simular crescimento micelial
+# simulate mycelial growth
 growth = grow(doses, b = 1, c = 0, d = 20, e = 0.001)
 
 df1 = data.frame(doses,growth)
 head(df1)
 ```
 
-Depois disso eu gero um gráfico com os valores simulados.
+We can then visualize the simulated observations.
 
 ```{r}
 df1 %>% 
@@ -74,50 +73,48 @@ df1 %>%
   geom_jitter(aes(factor(doses),growth, color = growth),
               width = 0.05,
               size = 3.5, 
-              # color= "steelblue",
               alpha = 1)+
   geom_boxplot(aes(factor(doses),growth), fill = NA, size = .7)+
   scale_color_viridis_c(option = "D",direction = 1)+
-  labs(x ="Doses", y = "Crescimento Micelial")+
+  labs(x ="Dose", y = "Mycelial growth")+
   theme_minimal_hgrid(font_size = 12)+
   theme(legend.position = "none")
-
 ```
 
-# Estimando a $EC_{50}$ para um isolado
+# Estimating $EC_{50}$ for a single isolate
 
-Para estimar a $EC_{50}$, antes devemos selecionar o modelo que melhor se ajusta aos dados. Para isso vamos usar a função `drm()` do pacote `drc`. Nessa função precisamos fornecer a formula, que é uma descrição simbólica da equação, que basicamente vai indicar qual é sua coluna com os valores de doses e qual é a coluna que contem os valores de crescimento micelial. No nosso caso a formula será `growth~dose`. Também precisamos indicar qual é o `data.frame` no argumento `data`, no nosso caso `data = df1`. O argumento `fct` é onde você indica qual modelo será utilizado. No nosso caso, vamos utilizar o `LL.4()`. Para saber quais modelos estão disponíveis use a função `getMeanFunctions()`.
+To estimate $EC_{50}$, we first fit an appropriate dose-response model. Here we use `drm()` from the `drc` package. We provide:
 
-veja a implementação do modelo. Aqui usamos a função summary para ver as estimativas dos parâmetros e suas estatísticas.
+- the formula, which maps response and dose columns
+- the data frame
+- the model function used for fitting
+
+In this example, the formula is `growth ~ doses`, the data frame is `df1`, and the model is `LL.4()`.
 
 ```{r}
 model1 = drm(formula = growth~doses,  data = df1, fct = LL.4())
 summary(model1)
 ```
 
-Veja o gráfico do ajuste
+The fitted curve can be inspected visually.
 
 ```{r}
 plot(model1)
 ```
 
-Para obter o valor de $EC_{50}$ vamos usar a função `ED`. Nela você precisa indicar o modelo ajustado `model1`. No argumento `respLev` é onde você indica qual o valor de EC que quer estimar. Como queremos 50% (EC50), `respLev=50`. Além disso, no argumento `interval` você também pode indicar se deseja estimar os intervalos de confiança da estimativa media de $EC_{50}$. PAra isso, basta indicar qual tipo de intervalo você deseja Para o modelo `LL.4()` usando `interval= "delta"`.(Nota: Para mais informações sobre intervalos de confiança use `?ED`).
+To obtain the $EC_{50}$ estimate itself, we use the function `ED()`. The argument `respLev = 50` requests the effective dose corresponding to 50% response reduction. Confidence intervals can also be obtained with `interval = "delta"`. This low-level workflow is useful because it makes the underlying estimation step explicit before moving to larger automated pipelines such as [`ec50estimator`](https://alvesks.github.io/ec50estimator/){target="_blank"}.
 
 ```{r}
 ED(model1, respLev=50, interval = "delta")
 ```
 
-# Estimando a $EC_{50}$ para MAIS DE UM isolado
+# Estimating $EC_{50}$ for multiple isolates
 
-Ótimo, conseguimos estimar a $EC_{50}$ para um isolado. No entanto, muitas vezes vamos precisar estimar para vários isolados. Sendo assim, agora vamos ver como a gente faz para estimar a $EC_{50}$ para uma situação onde temos 100 isolados.
+In practice, we often need to estimate $EC_{50}$ for many isolates rather than a single one. To illustrate this, I will create a hypothetical dataset with 50 fungal isolates, half collected in an organic field and half in a conventional field. These isolates will be evaluated against two fungicides, here called `Fungicide A` and `Fungicide B`.
 
-Para isso, vou criar um cenário no qual eu tenho 50 isolados de um fungo hipotético em que metade deles foram coletados em uma lavoura orgânica e a outra metade em uma lavoura convencional. Esses isolados foram submetidos a dois fungicidas diferentes, os quais denominei de `Fungicida A` e `Fungicida B`.
+## Fungicide A
 
-Agora vamos criar um `dada.frame` para um `fungicida A` e um para o `fungicida B`.
-
-## Fungicida A
-
-Para o `fungicida A` eu considerei que os isolados do cultivo convencional seriam menos sensíveis a ele.
+For `Fungicide A`, I assume isolates from the conventional field are less sensitive.
 
 ```{r}
 set.seed(1)
@@ -130,26 +127,25 @@ n = n_isolates*nrep*n_dose*n_field
 field = c(rep("Organic",nrep*n_dose), rep("Conventional",nrep*n_dose))
 isolate = sort(rep(1:((n_isolates*2)),nrep*n_dose))
 doses = (rep(c(0,1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1),nrep*n_field))
-EC50 = c(5e-3, 1e-1)# diferentes valores de Ec50
+EC50 = c(5e-3, 1e-1)
 
 
-fungicida_A = data.frame(isolate,
+fungicide_A = data.frame(isolate,
            field = rep(field,n_isolates),
-           fungicida = "Fungicide A",
+           fungicide = "Fungicide A",
            dose = rep(doses,n_isolates)) %>% 
-  mutate(efeito = case_when(
+  mutate(effect = case_when(
     field == "Conventional" ~ rnorm(n,EC50[2],0.0001),
     field == "Organic" ~ rnorm(n,EC50[1],0.0001))) %>% 
-  mutate(growth = grow(dose, b = 1, c = 0, d = 20, e = efeito))%>% 
-  dplyr::select(-efeito)
+  mutate(growth = grow(dose, b = 1, c = 0, d = 20, e = effect))%>% 
+  dplyr::select(-effect)
 
-head(fungicida_A)
-
+head(fungicide_A)
 ```
 
-## Fungicida B
+## Fungicide B
 
-Já Para o `fungicida B` eu considerei que os isolados teriam o mesmo padrão de sensibilidade, ou seja, não existe diferença entre as $EC_{50}$.
+For `Fungicide B`, I assume both field types have the same sensitivity pattern.
 
 ```{r}
 set.seed(1)
@@ -161,222 +157,102 @@ n = n_isolates*nrep*n_dose*n_field
 field = c(rep("Organic",nrep*n_dose), rep("Conventional",nrep*n_dose))
 isolate = sort(rep(1:((n_isolates*2)),nrep*n_dose))
 doses = (rep(c(0,1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1),nrep*n_field))
-EC50 = c(5e-3, 5e-3) # Mesma Ec50
+EC50 = c(5e-3, 5e-3)
 
 
-fungicida_B = data.frame(isolate,
+fungicide_B = data.frame(isolate,
                         field = rep(field,n_isolates),
-                        fungicida = "Fungicide B",
+                        fungicide = "Fungicide B",
                         dose = rep(doses,n_isolates)) %>% 
-  mutate(efeito = case_when(
+  mutate(effect = case_when(
     field == "Conventional" ~ rnorm(n,EC50[2],0.0001),
     field == "Organic" ~ rnorm(n,EC50[1],0.0001))) %>% 
-  mutate(growth = grow(dose, b = 1, c = 0, d = 20, e = efeito)) %>% 
-  dplyr::select(-efeito)
+  mutate(growth = grow(dose, b = 1, c = 0, d = 20, e = effect)) %>% 
+  dplyr::select(-effect)
 
-head(fungicida_B)
+head(fungicide_B)
 ```
 
-Aqui eu uso a função `bind_rows` para juntar os dois `data.frames` criados acima e crio um novo `data.frame` chamado apenas de `fungicida`.
+Now we combine the two data frames.
 
 ```{r message=FALSE, warning=FALSE}
-fungicida = fungicida_A %>% 
-  bind_rows(fungicida_B)
-head(fungicida)
+fungicide = fungicide_A %>% 
+  bind_rows(fungicide_B)
+head(fungicide)
 ```
 
-Existe uma forma em que você pode indicar na função `drm()` que você tem mais de um isolado no seu banco de dados. O código ficaria algo como abaixo. No entanto, se você tem muitos isolados a função pode demorar muito para rodar (se rodar). Além disso, o output da função não é muito fácil de lidar caso você não tenha muita experiência em lidar com matrizes no R.
+There is a way to fit all isolates at once using `drm()` with `curveid = isolate`. However, with large datasets this may become slow, and the resulting object can be difficult to handle.
 
-```{r eval=FALSE, include=T}
-# NÂO RODE ISSO
-model = drm(growth~dose, curveid = isolate,  fct = LL.4(), data = fungicida)
+```{r eval=FALSE, include=TRUE}
+# DO NOT RUN THIS ON VERY LARGE DATASETS WITHOUT CHECKING PERFORMANCE
+model = drm(growth~dose, curveid = isolate,  fct = LL.4(), data = fungicide)
 ED(model, 50, interval = "delta")
 ```
 
-```{r eval=FALSE, include=FALSE}
-fct = LL.4()
+For more practical workflows, I prefer using [`ec50estimator`](https://alvesks.github.io/ec50estimator/){target="_blank"} rather than writing a loop around `drm()` manually. That is exactly the use case the package was designed for: estimating $EC_{50}$ isolate by isolate within structured datasets while preserving grouping variables and confidence intervals in a tidy output.
 
-data = fungicida
-isolate_col = "isolate"
-strata_col = c("field", "fungicida")
-box = data.frame()
-strata_col=NULL
-
-if(is.null(strata_col)){
-  data_uni=data %>% 
-    mutate(strata = "")
-  strata_col= "strata"
-}else{
-data_uni = data %>% 
-  unite(strata, strata_col, sep = "---")
-}
-STRATA = data_uni[["strata"]]
-strata = as.character(unique(STRATA))
-
-
-for(i in 1:length(strata)){
-
-rowi = data_uni[["strata"]]==strata[i]
-datai = data_uni[rowi,]
-
-
-ID = datai[[isolate_col]]
-id = as.character(unique(ID))
-
-for(k in 1:length(id)){
-rowk = datai[[isolate_col]]==id[k]
-datak = datai[rowk,]
-
-
-try({
-model = drm(growth~dose,  fct =fct , data = datak)
-ed = ED(model, 50, interval = "delta", display = F)
-lil_box = data.frame(ID = as.character(id[k]), strata = as.character(strata[i]) ,ed) %>% 
-  remove_rownames() %>% 
-  mutate(strata = as.character(strata),
-         ID = as.character(ID)) %>% 
-  separate(strata, into = strata_col, sep = "---")
-box = box %>% 
-  bind_rows(lil_box)
-
-},silent = T)
-
-
-}}
-box
-
-```
-
-```{r eval=FALSE, include=FALSE}
-estimate_EC50 = function(formula, data, isolate_col, strata_col = NULL, fct,
-                         interval = c("none", "delta", "fls", "tfls")){
-
-box = data.frame()
-
-if(is.null(strata_col)){
-  data_uni=data %>% 
-    mutate(strata = "")
-  strata_col= "strata"
-}else{
-data_uni = data %>% 
-  unite(strata, strata_col, sep = "---")
-}
-
-STRATA = data_uni[["strata"]]
-strata = as.character(unique(STRATA))
-
-
-for(i in 1:length(strata)){
-
-rowi = data_uni[["strata"]]==strata[i]
-datai = data_uni[rowi,]
-
-
-ID = datai[[isolate_col]]
-id = as.character(unique(ID))
-
-for(k in 1:length(id)){
-rowk = datai[[isolate_col]]==id[k]
-datak = datai[rowk,]
-
-
-try({
-model = drm(formula,  fct =fct , data = datak)
-ed = ED(model, 50, interval = interval, display = F)
-lil_box = data.frame(ID = as.character(id[k]), strata = as.character(strata[i]) ,ed) %>% 
-  remove_rownames() %>% 
-  mutate(strata = as.character(strata),
-         ID = as.character(ID)) %>% 
-  separate(strata, into = strata_col,sep = "---")
-box = box %>% 
-  bind_rows(lil_box)
-
-},silent = T)
-
-
-}}
-box
-}
-```
-
-Sendo assim, eu criei um pacote para facilitar nossa vida.
-
-O nome do pacote é `ec50estimator`. Para instalar esse pacote você vai precisar usar a função `install.packages()`:
-
-```{r eval=FALSE, include=T}
-install.packages("ec50estimator")
-```
-
-A versão de desenvolvimento pode ser instalada usando o seguinte código:
-
-```{r eval=FALSE, include=T}
-if (!require(devtools)) {
-  install.packages("devtools")
-}
-
-devtools::install_github("AlvesKS/ec50estimator")'
-```
-
-Veja mais informaçãoes sobre o pacote [aqui](https://alvesks.github.io/ec50estimator/){target="_blank"}
-
-O processo de instalação pode sugerir a atualização/instalação de alguns pacote, portanto recomendo que faça a instalação desses outros pacotes.
-
-Assim que instalar o pacote. O próximo passo é carrega-lo no seu script.
+In other words, `drc` is excellent for understanding and fitting an individual curve, whereas `ec50estimator` becomes the practical layer when the analysis involves many isolates, fungicides, or production systems.
 
 ```{r}
-library(ec50estimator)
+EC50_est <- estimate_EC50(
+  growth ~ dose,
+  data = fungicide,
+  isolate_col = "isolate",
+  strata_col = c("field", "fungicide"),
+  interval = "delta",
+  fct = drc::LL.4()
+) %>% 
+  as.data.frame()
+
+head(EC50_est)
 ```
 
-A função `estimate_EC50()` é usada para calcular as EC50 para cada isolado dentro de cada sistema de cultivo e para cada fungicida. Assim como na função `drm()`, na `estimate_EC50()` você também precisa fornecer a `formula`. Forneça também no argumento `data` o `data.frame` onde estão seus dados. Indique a coluna que identifica cada isolado no argumento `isolate_col`. Se seus dados são estratificados (por região, sistema de cultivo ou ano, por exemplo) indique as colunas no argumento `strata_col`. Indique o modelo será utilizado no argumento `fct` (mesmos do pacote `drc`). Se você quer que os intervalos de confiança sejam estimados, indique no argumento `interval` (funciona da mesma forma que a função `drm()`).
+Important note: in this post I used the same model, `LL.4()`, for both fungicides. In real applications, you should verify which model is most appropriate for your data. A useful strategy is to fit candidate models with `drm()` for a subset of isolates and compare them with `mselect()`. Once that modeling choice is clear, `ec50estimator` makes it much easier to apply the workflow consistently across all curves.
 
-```{r}
-df_ec50 = estimate_EC50(growth~dose,
-                        data =fungicida,
-                        isolate_col = "isolate", 
-                        strata_col =  c("field","fungicida"),
-                        interval = "delta",
-                        fct = LL.3())
-head(df_ec50)
+## Visualizing the estimated EC50 values
+
+Once estimates are available, one useful step is to compare their distributions across strata.
+
+```{r fig.width=8, fig.height=4.8}
+EC50_est %>% 
+  ggplot(aes(x = field, y = Estimate, color = field)) +
+  geom_jitter(width = 0.1, alpha = 0.6) +
+  geom_boxplot(fill = NA, outlier.shape = NA) +
+  facet_wrap(~fungicide, scales = "free_x", nrow = 1) +
+  theme_half_open(font_size = 12) +
+  scale_color_colorblind() +
+  scale_y_log10() +
+  labs(
+    x = "Production system",
+    y = expression(EC[50]),
+    title = expression("Estimated distributions of " * EC[50] * " across production systems")
+  )
 ```
 
-::: callout-warning
-ATENÇÃO: Neste post, eu usei o mesmo modelo (`LL.4()`) para os dois fungicidas (A e B). No entanto, é importante verificar qual modelo é mais apropriado para seus dados. Para isso, antes de rodar a função `estimate_EC50()` para todos seus dados, use a função `drm()` para ajustar um modelo para alguns isolados e posteriormente utilize a função `mselect()` para calcular as estatísticas que vão te auxiliar a selecionar o melhor modelo. Dica: quanto menor o valor de AIC, melhor o modelo. Para mais informações, rode o comando `?mselect` no seu Console.
-:::
+Another possibility is to inspect the full distribution more carefully.
 
-## Gráficos
-
-Veja as estimativas de EC50 e intervalos de confiança para todos os isolados.
-
-```{r fig.height=10, fig.width=5}
-df_ec50 %>% 
-  ggplot(aes(as.numeric(ID),Estimate, color = field))+
-  geom_point(size = 2)+
-  geom_errorbar(aes(ymin=Lower,ymax = Upper), width=0)+
-  facet_wrap(~fungicida, scales = "free_x",nrow = 1)+
-  scale_y_log10()+
-  scale_x_continuous(breaks = 1:50)+
-  scale_color_manual(values = c("darkred", "steelblue"))+
-  labs(x = "Isolates", y = "EC50")+
-  theme_minimal_vgrid(font_size = 10)+
-  coord_flip()+
-  theme(axis.text.x = element_text(size=10),
-        legend.position = "bottom")
+```{r fig.width=8, fig.height=5.6}
+EC50_est %>% 
+  ggplot(aes(x = Estimate, y = field, fill = field)) +
+  geom_density_ridges(alpha = 0.7) +
+  facet_wrap(~fungicide, nrow = 2) +
+  theme_half_open(font_size = 12) +
+  scale_fill_colourblind() +
+  scale_x_log10() +
+  labs(
+    x = expression(EC[50]),
+    y = "Production system",
+    title = expression("Density view of estimated " * EC[50] * " values")
+  )
 ```
 
-Use o pacote `ggridges` para criar gráficos de densidade.
+# Final remarks
 
-```{r fig.height=5, fig.width=6}
-df_ec50 %>% 
-  ggplot(aes(Estimate, field, fill = stat(x)))+
-  geom_density_ridges_gradient(alpha = 0.3)+
-  scale_x_log10()+
-  scale_fill_viridis_c(option = "C")+
-  facet_wrap(~fungicida, nrow = 2)+
-  theme_minimal_hgrid()+
-  labs(x = "EC50", y = "Field")+
-  theme(legend.position = "none")
-```
+Estimating $EC_{50}$ is an important step in fungicide sensitivity studies, but good inference depends on more than simply fitting one model and reporting one number. It is important to think about:
 
-# References
+- the biological meaning of the response variable
+- the appropriateness of the selected dose-response model
+- the structure of the dataset
+- how estimates vary across isolates, years, fields, or treatments
 
-Noel, Z. A., Wang, J., and Chilvers, M. I. 2018. Significant Influence of EC 50 Estimation by Model Choice and EC 50 Type. Plant Disease. 102:708--714.
+The workflow shown here provides a starting point for both teaching and applied analyses in plant pathology.

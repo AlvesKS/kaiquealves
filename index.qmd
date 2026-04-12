@@ -1,52 +1,121 @@
 ---
-title: " Hello, I am Kaique Alves!"
-toc: true
+title: "Kaique dos Santos Alves"
+subtitle: "Plant Disease Epidemiologist, Plant Health Scientist, and Quantitative Modeler"
+image: "https://kaiquealves.netlify.app/images/panoramic.jpg"
+toc: false
+page-layout: full
 ---
-### **Welcome to my website!**
-![](images/panoramic.jpg){.preview-image}
 
+::: {.hero-grid}
+::: {.hero-copy}
+# Plant disease epidemiology for better breeding and better decisions
 
+I am an Agronomist with M.Sc. and D.Sc. training in Plant Pathology, currently working as a Plant Health Scientist at Bayer Crop Science. My work connects epidemiology, risk assessment, modeling, and data science to practical decisions in plant breeding, crop protection, and sustainable agriculture.
 
-I am a D.Sc candidate in Plant Pathology at Universidade Federal de Viçosa in Brazil and Visiting scholar at Cornell Agritech in the US.
+::: {.hero-actions}
+[View research](publications.qmd){.btn .btn-primary .btn-lg}
+[Explore tools](resources.qmd){.btn .btn-outline-primary .btn-lg}
+[Read about my work](about.qmd){.btn .btn-outline-secondary .btn-lg}
+:::
 
-::: {.grid .step .column-page-right}
-::: {.g-col-lg-3 .g-col-12}
-
-### Find me elsewhere
-
-::: 
-
-::: {.tool .g-col-lg-9 .g-col-12}
-
-<a href=" https://twitter.com/alvesks_" role="button" target="_blank" class="btn btn-outline-light">
-![](images/Twitter-logo.png){width="77"}Twitter
-</a>
-
-
-<a href="https://github.com/AlvesKS" role="button" target="_blank" class="btn btn-outline-light">
-![](images/github_logo.png){width="77"}GitHub
-</a>
-
-<a href="https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&hl" target="_blank" role="button" class="btn btn-outline-light">
-![](images/google_scholar_logo.png){width="77"}Scholar
-</a>
-
-<a href="https://osf.io/32gp6/" target="_blank" role="button" class="btn btn-outline-light">
-![](images/osf_logo.png){width="77"}OSF
-</a>
-
-
+::: {.hero-note}
+Working across disease surveillance, predictive modeling, yield loss analysis, mechanistic simulation, machine learning, and data-driven plant health strategy.
 :::
 :::
 
-## Research Interests
+::: {.hero-panel}
+![](images/foto_kaique_alves.png){.profile-photo}
 
-I am deeply interested in plant disease epidemiology. I am really into the quantitative aspects of epidemics, such as epidemiological models, stochastic simulations, and using modern statistical approaches to link environmental features to disease intensity and occurrence.
+## At a glance
 
-## Background
+- Plant Health Scientist, Bayer Crop Science
+- 10+ years in plant disease epidemiology
+- R package developer and applied modeler
 
-My background is in quantitative plant disease epidemiology and applied statistics in agriculture. During my undergraduate as an Agronomy student I had the opportunity to work with plant pathologists, engineers, and mathematicians, from whom I got inspired to work with epidemics. During my graduate (M.Sc and D.Sc) at [Universidade Federal de Viçosa (UFV)](https://www.ufv.br/){target="_blank"} I focused on delving into plant pathology and learning more about epidemiology. I got enveloped in research projects on the epidemiology of several important plant diseases, such as citrus Huanglongbing, soybean rust, Fusarium head blight, Wheat Blast, and white mold. Although I had the chance to learn a little bit about programming during my undergraduate, during graduate school was when I really developed this skill. Today I am an avid R user!
+::: {.contact-list}
+[kaiquedsalves@gmail.com](mailto:kaiquedsalves@gmail.com)
 
-## Personal
++55 27 99748 5098
 
-I enjoy playing and watching computer games. I am also really into watching movies and TV shows. Recently I started cycling, which was a challenge in the beginning, but now is one of my favorite outdoor activities.
+Uberlandia, MG, Brazil
+:::
+:::
+:::
+
+## Research and industry focus
+
+::: {.card-grid}
+::: {.feature-card}
+### Disease risk modeling
+
+I develop mechanistic, statistical, and machine learning frameworks to predict disease prevalence, support surveillance, and improve decision-making across breeding and plant health programs.
+:::
+
+::: {.feature-card}
+### Plant breeding support
+
+My work supports strategic decision-making, data collection design, and quantitative plant health priorities for corn and soybean breeding programs across large geographies.
+:::
+
+::: {.feature-card}
+### Quantitative innovation
+
+I build analytical workflows, software tools, and modeling systems that turn research-grade methods into practical tools for teams working in real breeding and commercial contexts.
+:::
+:::
+
+## Core strengths
+
+::: {.pill-row}
+`Plant pathology`
+`Epidemiology`
+`Risk assessment`
+`Disease surveillance`
+`Machine learning`
+`Bayesian inference`
+`Stochastic simulations`
+`R programming`
+`Data visualization`
+`Decision support systems`
+`High-throughput phenotyping`
+`Project leadership`
+:::
+
+## Selected impact
+
+::: {.impact-grid}
+::: {.impact-card}
+### Bayer Crop Science
+
+Led the development of risk-modeling frameworks for breeding pipelines, disease monitoring programs, and decision-support systems that integrate monitoring data, predictive models, and climate outlooks.
+:::
+
+::: {.impact-card}
+### Global collaboration
+
+Worked across Latin America and global teams on major diseases affecting corn and soybean, including soybean rust, corn stunt, tar spot, and southern corn leaf blight.
+:::
+
+::: {.impact-card}
+### Software and methods
+
+Developed the `epifitter` and `ec50estimator` R packages and several web applications to support data-driven plant pathology, teaching, and applied epidemiological analysis.
+:::
+:::
+
+## Recent highlights
+
+- Plant Health Scientist, Bayer Crop Science, 2024 to present.
+- LATAM Risk Assessment Lead at Bayer Crop Science, 2022 to 2024.
+- Research Intern in Plant Pathology at Cornell University, 2021 to 2022.
+- Author of recent 2025 publications in *Plant Pathology*, *Phytopathology*, and *Crop Protection*.
+
+## Connect
+
+::: {.connect-grid}
+[Email](mailto:kaiquedsalves@gmail.com){.btn .btn-outline-dark}
+[LinkedIn](https://www.linkedin.com/in/kaique-alves-ab253436/){target="_blank" .btn .btn-outline-dark}
+[GitHub](https://github.com/AlvesKS){target="_blank" .btn .btn-outline-dark}
+[Google Scholar](https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&hl=en){target="_blank" .btn .btn-outline-dark}
+[OSF](https://osf.io/32gp6/){target="_blank" .btn .btn-outline-dark}
+:::

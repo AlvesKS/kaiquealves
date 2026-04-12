@@ -39,3 +39,6 @@ vignettes/*.pdf
 .Renviron
 
 /.quarto/
+/_site/
+/alvesks_website_files/
+/cv_extract.txt

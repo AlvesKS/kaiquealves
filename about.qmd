@@ -1,30 +1,111 @@
 ---
-title: "About me"
+title: "About"
 toc: false
 ---
 
-<!-- ::: {.column-margin} -->
+## Professional summary
 
-<!-- ![](images/photo_circulo.png){width="200" fig-align="right"} -->
+I am a Plant Disease Epidemiologist and Agronomist with advanced training in Plant Pathology, combining academic depth with industry-facing execution. My work brings together plant disease epidemiology, risk assessment, predictive modeling, and data science to solve practical problems in agriculture.
 
-<!-- ::: -->
+At Bayer Crop Science, I support strategic decisions in corn and soybean breeding programs by developing frameworks for disease risk prediction, monitoring, and data collection optimization. Across research and industry, I have worked on mechanistic models, machine learning systems, yield loss analysis, phenotyping methods, and decision-support tools designed to move from scientific insight to field impact.
 
-### Bio
+My background includes more than a decade of experience in plant disease epidemiology, with projects spanning local and international collaboration. I am especially interested in building rigorous quantitative solutions that are scientifically robust, operationally useful, and scalable across regions.
 
-I was born in a small town called Boa Esperança in the state of Espírito Santo in Brazil. I am an Agronomist and D.Sc candidate in Plant Pathology specialized in quantitative plant disease epidemiology. My research is focused in quantitative epidemiology with experience in phytopathometry, temporal and spatial dynamics, yield loss, disease management, and environmental effects on epidemics. The methods I have been applying in my research include stochastic simulations, frequentist and Bayesian statistics, and machine learning algorithms. I am also deeply interested in R, Data Science, and Open Science.
+## Current roles and focus
 
-### Education
+### Bayer Crop Science
 
-**Universidade Federal de Viçosa** \| Viçosa, MG, Brazil
+**Plant Health Scientist, Bayer Crop Science**  
+2024 to present
 
--   D.Sc. in Plant Pathology \| August 2019 - Currently
+- Leading the development of disease risk-modeling frameworks for breeding pipelines across large geographies.
+- Supporting strategic plant health decisions and optimization of data collection.
+- Building decision-support systems that combine monitoring data, predictive models, and climate outlooks.
+- Collaborating across cross-functional teams on quantitative frameworks for breeding decisions.
+- Advancing analytical capabilities in plant health through modern statistical and modeling approaches.
 
--   M.Sc. in Plant Pathology \| March 2018 - July 2019
+**LATAM Risk Assessment Lead**  
+2022 to 2024
 
-**Universidade Federal de Viçosa** \| Viçosa, MG, Brazil
+- Led research on key corn and soybean diseases in Latin America in support of breeding pipelines.
+- Developed predictive risk models using machine learning and mechanistic simulation.
+- Built yield loss and disease impact frameworks to support selection decisions and sustainability goals.
+- Mentored partners in epidemiology, data science, and programming.
 
--   B.S. in Agronomy \| May 2013 - December 2017
+## Previous experience
 
-### Experience
+### Cornell University
 
-**Cornell University** - Research Intern \| November 2021 - Currently
+**Research Intern, Plant Pathology**  
+2021 to 2022
+
+- Studied environmental drivers of white mold prevalence in snap bean using machine learning and causal inference.
+- Developed an interactive interface for BSPcast, a weather-based forecasting model for onion Stemphylium leaf blight.
+- Modeled long-term survival of *Sclerotinia sclerotiorum* across soil depths under field conditions.
+
+### Universidade Federal de Vicosa
+
+**D.Sc. in Plant Pathology**  
+2019 to 2022
+
+- Modeled soybean rust outbreaks and crop loss in Brazil using Bayesian, meta-analytical, and stochastic approaches.
+- Studied climate associations with the spatiotemporal dynamics of citrus Huanglongbing.
+- Developed R packages for disease progress and dose-response analysis.
+- Built standard area diagrams and quantitative disease phenotyping methods.
+
+**M.Sc. in Plant Pathology**  
+2018 to 2019
+
+- Estimated time-varying infection rates using particle filtering approaches.
+- Conducted yield loss meta-analysis and fungicide profitability simulations for Fusarium head blight.
+- Applied mechanistic models to plant disease temporal dynamics.
+
+### Universidade Federal do Espirito Santo
+
+**B.S. in Agronomy**  
+2013 to 2017
+
+- Worked on papaya sticky disease and viral epidemic simulations in orchards.
+- Used data-assimilation algorithms for parameter inference in plant disease epidemics.
+- Contributed to modeling projects in coffee drying and wildland fire applications.
+
+## Education
+
+- D.Sc. in Plant Pathology, Universidade Federal de Vicosa, 2019 to 2022
+- M.Sc. in Plant Pathology, Universidade Federal de Vicosa, 2018 to 2019
+- B.S. in Agronomy, Universidade Federal do Espirito Santo, 2013 to 2017
+- Technician for Agriculture and Livestock, Instituto Federal do Espirito Santo, 2010 to 2012
+
+## Areas of expertise
+
+::: {.pill-row}
+`Plant pathology`
+`Epidemiology`
+`Risk assessment`
+`Disease surveillance`
+`Statistics`
+`Machine learning`
+`Modeling`
+`Stochastic simulations`
+`Bayesian inference`
+`R programming`
+`Data science`
+`Data visualization`
+`High-throughput phenotyping`
+`Decision support systems`
+`Scientific leadership`
+`Project management`
+:::
+
+## Leadership and recognition
+
+- Technical leadership in plant health modeling initiatives at Bayer Crop Science, 2024 to present.
+- Mega-Symposia Speaker, Innovations in Crop Science 2024.
+- OneR&D Awards, Power Sustainability, 2023.
+- Selected for the APS Melhus Graduate Student Symposium, 2022.
+- Chair of graduate student representation in Plant Pathology at Universidade Federal de Vicosa, 2021 to 2022.
+
+## Languages
+
+- Portuguese, native
+- English, fluent

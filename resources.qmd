@@ -1,43 +1,45 @@
 ---
-title: "Resources"
+title: "Tools and Resources"
 format: html
 toc: true
 ---
 
-## Packages
+This page gathers software, apps, and learning resources connected to my work in quantitative plant disease epidemiology.
+
+## R packages
 
 ### [*epifitter*](https://alvesks.github.io/epifitter/){target="_blank"}
 
-This is an R package that provides a set of function for dealing with disease progress curves, including fitting models and simulation epidemics.
+`epifitter` is an R package for analysis and simulation of plant disease progress curves. It supports model fitting, comparison of epidemic trajectories, and teaching or applied analysis involving temporal disease dynamics.
 
 ### [*ec50estimator*](https://alvesks.github.io/ec50estimator/){target="_blank"}
 
-`ec50estimator` provides a quick, easy and automated way of estimating the effective control to 50% of growth inhibition ($EC_{50}$) from multi-isolate data sets. It also is optimized to deal with stratified data.
+`ec50estimator` provides an automated workflow for estimating EC50 values from stratified multi-isolate dose-response datasets. It is designed to make fungicide sensitivity analysis faster, clearer, and easier to reproduce.
 
-## Shiny apps
+## Interactive apps
 
 ### [*Rusty Profits*](https://alvesks.shinyapps.io/rusty-profits/){target="_blank"}
 
-`Rusty profits` is an app that evolved from an [work](https://doi.org/10.1111/ppa.13396){target="_blank"} that I conducted on fungicide profitability for managing soybean rust in Brazil. The app can be used to estimate fungicide profitability given the spraying cost, soybean price, and fungicide control efficacy.
+An interactive app inspired by my work on fungicide profitability for soybean rust management in Brazil. It helps users explore how fungicide costs, soybean prices, and control efficacy affect economic outcomes.
 
 ### [*simDPC*](https://alvesks.shinyapps.io/simDPC/){target="_blank"}
 
-Simulate disease progress curved with this app. It is a very good tool for teaching temporal aspects of epidemics, like differing the different types of models used for comparative epidemiology.
+A teaching and exploration app for simulating disease progress curves. It is useful for understanding temporal epidemic behavior and comparing model assumptions in plant disease epidemiology.
 
 ### [*epidemioBR*](https://alvesks.shinyapps.io/epidemioBR/){target="_blank"}
 
-Here is where you can find the Brazilian community of epidemiologist. This an repository showing where and how to find members of our community is located in Brazil. Connect with us!
+A community-oriented app that helps users discover members of the Brazilian epidemiology community and strengthen professional connections across the country.
 
-<!-- ### [*BSPcast*¹](https://alvesks.shinyapps.io/BSPcast/){target="_blank"} -->
+### [*BSPcast*](https://alvesks.shinyapps.io/BSPcast/){target="_blank"}
 
-<!-- This is a prototype of a decision support system (DSS) for calculating the risk Stemphylium leaf blight in onion fields located in New York. -->
+`BSPcast` is a forecasting interface originally developed around weather-based risk prediction for Stemphylium leaf blight of onion. It reflects my interest in translating epidemiological models into practical decision-support tools.
 
-<!-- ::: column-margin -->
-<!-- ¹ Under development -->
-<!-- ::: -->
+## Tutorials and outreach
 
-## Tutorials
+### Videos
 
-### videos (pt-br)
+- YouTube channel [*Epidemio Fora da Curva*](https://www.youtube.com/channel/UCl5H4LMBYJB1Hu3HgCmgyCg){target="_blank"}
 
--   YouTube channel [*Epidemio Fora da Curva*](https://www.youtube.com/channel/UCl5H4LMBYJB1Hu3HgCmgyCg){target="_blank"}
+## What connects these resources
+
+The common thread across these tools is practical quantitative plant health. Whether the goal is teaching, reproducible analysis, or field-ready risk support, I aim to build resources that make epidemiological reasoning more accessible and more useful.
