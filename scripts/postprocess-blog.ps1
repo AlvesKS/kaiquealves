@@ -20,3 +20,27 @@ if (Test-Path $indexPath) {
   $content = $content.Replace("./posts/yield-loss/yield-loss.html", "./posts/yield-loss/")
   Set-Content -Path $indexPath -Value $content -Encoding UTF8
 }
+
+$htmlFiles = Get-ChildItem $blogRoot -Recurse -Filter "*.html"
+foreach ($file in $htmlFiles) {
+  $content = Get-Content $file.FullName -Raw
+  $content = $content.Replace('href="./../public/images/kaique-alves.jpg"', 'href="/images/kaique-alves.jpg"')
+  $content = $content.Replace('href="../../../public/images/kaique-alves.jpg"', 'href="/images/kaique-alves.jpg"')
+  $content = $content.Replace('href="./index.html"', 'href="/"')
+  $content = $content.Replace('href="../../index.html"', 'href="/"')
+  $content = $content.Replace('href="./"', 'href="/"')
+  $content = $content.Replace('href="../../"', 'href="/"')
+  $content = $content.Replace('href="./research/"', 'href="/research/"')
+  $content = $content.Replace('href="../../research/"', 'href="/research/"')
+  $content = $content.Replace('href="./research"', 'href="/research/"')
+  $content = $content.Replace('href="./tools/"', 'href="/tools/"')
+  $content = $content.Replace('href="../../tools/"', 'href="/tools/"')
+  $content = $content.Replace('href="./tools"', 'href="/tools/"')
+  $content = $content.Replace('href="./blog/"', 'href="/blog/"')
+  $content = $content.Replace('href="../../blog/"', 'href="/blog/"')
+  $content = $content.Replace('href="./blog"', 'href="/blog/"')
+  $content = $content.Replace('href="./about/"', 'href="/about/"')
+  $content = $content.Replace('href="../../about/"', 'href="/about/"')
+  $content = $content.Replace('href="./about"', 'href="/about/"')
+  Set-Content -Path $file.FullName -Value $content -Encoding UTF8
+}

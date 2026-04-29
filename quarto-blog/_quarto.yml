@@ -7,18 +7,20 @@ website:
   site-url: https://kaiquealves.netlify.app/blog
   description: "Technical notes and tutorials in plant disease epidemiology, modeling, and quantitative plant pathology."
   favicon: ../public/images/kaique-alves.jpg
-  search: true
+  search: false
   navbar:
     title: "Kaique Alves"
     left:
-      - text: "Portfolio"
+      - text: "Overview"
         href: /
       - text: "Research"
-        href: /research
+        href: /research/
       - text: "Tools"
-        href: /tools
+        href: /tools/
+      - text: "Blog"
+        href: /blog/
       - text: "About"
-        href: /about
+        href: /about/
   page-footer:
     left: "Technical writing in quantitative plant pathology."
     right: "Back to portfolio: kaiquealves.netlify.app"
