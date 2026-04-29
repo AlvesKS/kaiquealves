@@ -1,0 +1,46 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/publications.html"
+  to = "/research/"
+  status = 301
+
+[[redirects]]
+  from = "/resources.html"
+  to = "/tools/"
+  status = 301
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/blog/posts/:post/:file"
+  to = "/blog/posts/:post/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/blog/posts/:post/"
+  to = "/blog/posts/:post/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/blog/*"
+  to = "/blog/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/docs/blog/"
+  to = "/blog/"
+  status = 301

@@ -1,0 +1,8 @@
+/publications.html           /research/          301
+/resources.html              /tools/             301
+/about.html                  /about/             301
+/index.html                  /                  301
+/docs/blog/posts/:post/:file  /blog/posts/:post/  301
+/docs/blog/posts/:post/      /blog/posts/:post/  301
+/docs/blog/*                 /blog/:splat        301
+/docs/blog/                  /blog/              301

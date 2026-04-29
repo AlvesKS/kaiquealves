@@ -42,3 +42,7 @@ vignettes/*.pdf
 /_site/
 /alvesks_website_files/
 /cv_extract.txt
+/node_modules/
+/.next/
+/out/
+/.vercel/
