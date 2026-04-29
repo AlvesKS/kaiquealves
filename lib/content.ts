@@ -89,6 +89,13 @@ export const tools = [
       "Automated EC50 estimation for stratified multi-isolate fungicide sensitivity datasets."
   },
   {
+    name: "windcut",
+    type: "R package",
+    href: "https://alvesks.github.io/windcut/",
+    description:
+      "Utilities for detecting and summarizing wind-speed periods from meteorological time series."
+  },
+  {
     name: "BSPcast",
     type: "Decision-support app",
     href: "https://alvesks.shinyapps.io/BSPcast/",

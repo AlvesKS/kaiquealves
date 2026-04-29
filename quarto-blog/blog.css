@@ -71,6 +71,11 @@ h4,
   gap: 1.3rem;
 }
 
+.navbar .navbar-nav.ms-auto {
+  align-items: center;
+  gap: 0.7rem;
+}
+
 .navbar-nav .nav-link {
   padding: 0;
   color: var(--muted) !important;
@@ -81,6 +86,42 @@ h4,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--green) !important;
+}
+
+.navbar .quarto-navbar-tools {
+  gap: 0.65rem;
+}
+
+.navbar .quarto-navigation-tool,
+.navbar .navbar-nav.ms-auto .nav-link {
+  color: var(--muted) !important;
+}
+
+.navbar .quarto-navigation-tool:hover,
+.navbar .navbar-nav.ms-auto .nav-link:hover {
+  color: var(--green) !important;
+}
+
+#quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon,
+.aa-DetachedSearchButtonIcon {
+  color: var(--muted);
+}
+
+.aa-DetachedSearchButton {
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.86rem;
+}
+
+.aa-DetachedSearchButton:hover {
+  border-color: rgba(31, 111, 88, 0.5);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--green);
 }
 
 .quarto-title-banner {

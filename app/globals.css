@@ -40,7 +40,7 @@ a:hover {
 
 .site-header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 2rem;
   max-width: 1180px;
@@ -50,7 +50,6 @@ a:hover {
 }
 
 .brand,
-.mail-link,
 .main-nav a,
 .text-links a,
 .home-actions-minimal a {
@@ -66,17 +65,78 @@ a:hover {
 
 .main-nav {
   display: flex;
+  justify-content: center;
   gap: 1.3rem;
 }
 
-.main-nav a,
-.mail-link {
+.main-nav a {
   color: var(--muted);
   text-decoration: none;
 }
 
-.mail-link {
+.header-tools {
+  display: flex;
   justify-self: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.social-links svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+}
+
+.site-search label {
+  display: block;
+}
+
+.site-search span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.site-search input[type="search"] {
+  width: 9.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.38rem 0.75rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.58);
+  font: inherit;
+  font-size: 0.86rem;
+  outline: none;
+  transition: border-color 160ms ease, background 160ms ease, width 160ms ease;
+}
+
+.site-search input[type="search"]:focus {
+  width: 12rem;
+  border-color: rgba(31, 111, 88, 0.5);
+  background: rgba(255, 255, 255, 0.86);
 }
 
 .home-page {
@@ -299,10 +359,17 @@ h1 {
 
   .main-nav {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
-  .mail-link {
+  .header-tools {
     justify-self: start;
+    flex-wrap: wrap;
+  }
+
+  .site-search input[type="search"],
+  .site-search input[type="search"]:focus {
+    width: min(18rem, calc(100vw - 2.5rem));
   }
 
   .home-page,

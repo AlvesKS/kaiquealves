@@ -7,7 +7,7 @@ website:
   site-url: https://kaiquealves.netlify.app/blog
   description: "Technical notes and tutorials in plant disease epidemiology, modeling, and quantitative plant pathology."
   favicon: ../public/images/kaique-alves.jpg
-  search: false
+  search: true
   navbar:
     title: "Kaique Alves"
     left:
@@ -21,6 +21,19 @@ website:
         href: /blog/
       - text: "About"
         href: /about/
+    right:
+      - icon: envelope
+        href: mailto:kaiquedsalves@gmail.com
+        aria-label: Email
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kaique-alves-ab253436/
+        aria-label: LinkedIn
+      - text: "X"
+        href: https://x.com/alvesks_
+        aria-label: X
+      - icon: github
+        href: https://github.com/AlvesKS
+        aria-label: GitHub
   page-footer:
     left: "Technical writing in quantitative plant pathology."
     right: "Back to portfolio: kaiquealves.netlify.app"
