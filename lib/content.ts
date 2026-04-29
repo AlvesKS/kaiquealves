@@ -1,6 +1,7 @@
 export const site = {
   name: "Kaique Alves",
   fullName: "Kaique dos Santos Alves",
+  url: "https://alvesks.com.br",
   email: "kaiquedsalves@gmail.com",
   role: "Plant Disease Epidemiologist",
   description:
@@ -146,4 +147,77 @@ export const education = [
   "D.Sc. in Plant Pathology, Universidade Federal de Vicosa",
   "M.Sc. in Plant Pathology, Universidade Federal de Vicosa",
   "B.S. in Agronomy, Universidade Federal do Espirito Santo"
+];
+
+export const searchItems = [
+  {
+    title: "Home",
+    href: "/",
+    type: "Page",
+    summary:
+      "Plant disease risk, yield loss, and quantitative tools for better decisions in plant health.",
+    keywords: ["kaique alves", "plant disease epidemiology", "plant health"]
+  },
+  {
+    title: "Research",
+    href: "/research",
+    type: "Page",
+    summary:
+      "Research themes and selected publications in quantitative epidemiology, disease risk, and yield loss.",
+    keywords: researchThemes
+  },
+  {
+    title: "Tools",
+    href: "/tools",
+    type: "Page",
+    summary:
+      "Software, R packages, Shiny apps, and resources for quantitative plant pathology.",
+    keywords: tools.map((tool) => tool.name)
+  },
+  {
+    title: "About",
+    href: "/about",
+    type: "Page",
+    summary:
+      "Professional bio, experience, education, and background in plant disease epidemiology.",
+    keywords: ["bio", "experience", "education", "Bayer", "Cornell"]
+  },
+  {
+    title: "Simulating epidemics with epifitter",
+    href: "/blog/posts/epifitter-epidemias/",
+    type: "Blog post",
+    summary:
+      "A technical discussion of initial inoculum and infection rate in disease progress curves using epifitter.",
+    keywords: ["epifitter", "disease progress", "infection rate", "initial inoculum"]
+  },
+  {
+    title: "Modeling plant disease yield loss",
+    href: "/blog/posts/yield-loss/",
+    type: "Blog post",
+    summary:
+      "Attainable yield, slope, damage coefficient, mixed-effects models, and meta-analysis for plant disease yield loss.",
+    keywords: ["yield loss", "damage coefficient", "lme4", "metafor", "mixed model"]
+  },
+  {
+    title: "Fungal sensitivity to fungicides in R",
+    href: "/blog/posts/ec50/",
+    type: "Blog post",
+    summary:
+      "How to estimate EC50 with drc for simple curves and ec50estimator for multiple stratified curves.",
+    keywords: ["EC50", "fungicide sensitivity", "drc", "ec50estimator"]
+  },
+  ...tools.map((tool) => ({
+    title: tool.name,
+    href: tool.href,
+    type: tool.type,
+    summary: tool.description,
+    keywords: [tool.name, tool.type]
+  })),
+  ...selectedPublications.map((publication) => ({
+    title: publication.venue,
+    href: publication.href,
+    type: "Publication",
+    summary: publication.citation,
+    keywords: [publication.venue]
+  }))
 ];

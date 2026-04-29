@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;760;800&display=swap");
 
 :root {
-  --paper: #f7f8f4;
-  --ink: #172426;
-  --muted: #596b6b;
-  --line: rgba(23, 36, 38, 0.14);
-  --green: #1f6f58;
-  --blue: #6c8fa3;
-  --clay: #b65f3a;
+  --paper: #f3f6f7;
+  --ink: #14212b;
+  --muted: #5f717b;
+  --line: rgba(20, 33, 43, 0.14);
+  --green: #5b8c78;
+  --blue: #246a8d;
+  --clay: #d99a2b;
 }
 
 html {
@@ -18,20 +18,21 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(90deg, rgba(108, 143, 163, 0.13), transparent 28%),
-    linear-gradient(180deg, #fbfbf7 0%, var(--paper) 42%, #eef3ee 100%);
-  font-family: "IBM Plex Sans", sans-serif;
+    radial-gradient(circle at 12% 8%, rgba(36, 106, 141, 0.15), transparent 28rem),
+    radial-gradient(circle at 88% 18%, rgba(91, 140, 120, 0.15), transparent 24rem),
+    linear-gradient(180deg, #fbfdfe 0%, var(--paper) 44%, #eaf1f3 100%);
+  font-family: "Inter", sans-serif;
 }
 
 a {
   color: inherit;
-  text-decoration-color: rgba(31, 111, 88, 0.38);
+  text-decoration-color: rgba(36, 106, 141, 0.38);
   text-underline-offset: 0.22em;
 }
 
 a:hover {
-  color: var(--green);
-  text-decoration-color: var(--green);
+  color: var(--blue);
+  text-decoration-color: var(--blue);
 }
 
 h1,
@@ -41,9 +42,9 @@ h4,
 .title,
 .navbar-title {
   color: var(--ink);
-  font-family: "Source Serif 4", serif;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 760;
+  letter-spacing: -0.045em;
 }
 
 .navbar {
@@ -62,9 +63,10 @@ h4,
 .navbar-brand {
   margin-right: 2rem;
   color: var(--ink) !important;
-  font-family: "Source Serif 4", serif;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 760;
+  letter-spacing: -0.02em;
 }
 
 .navbar-nav {
@@ -80,12 +82,12 @@ h4,
   padding: 0;
   color: var(--muted) !important;
   font-size: 0.94rem;
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--green) !important;
+  color: var(--blue) !important;
 }
 
 .navbar .quarto-navbar-tools {
@@ -99,7 +101,7 @@ h4,
 
 .navbar .quarto-navigation-tool:hover,
 .navbar .navbar-nav.ms-auto .nav-link:hover {
-  color: var(--green) !important;
+  color: var(--blue) !important;
 }
 
 #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon,
@@ -114,14 +116,14 @@ h4,
   padding: 0.35rem 0.75rem;
   background: rgba(255, 255, 255, 0.58);
   color: var(--muted);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.86rem;
 }
 
 .aa-DetachedSearchButton:hover {
-  border-color: rgba(31, 111, 88, 0.5);
+  border-color: rgba(36, 106, 141, 0.5);
   background: rgba(255, 255, 255, 0.86);
-  color: var(--green);
+  color: var(--blue);
 }
 
 .quarto-title-banner {
@@ -168,9 +170,10 @@ main.content h3 {
 .quarto-listing .listing-title,
 .quarto-listing .listing-title a {
   color: var(--ink);
-  font-family: "Source Serif 4", serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.45rem;
-  font-weight: 700;
+  font-weight: 760;
+  letter-spacing: -0.035em;
 }
 
 .quarto-post,

@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { IBM_Plex_Sans, Source_Serif_4 } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/lib/content";
 
-const serif = Source_Serif_4({
+const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap"
-});
-
-const sans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap"
 });
@@ -25,7 +18,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`
   },
   description: site.description,
-  metadataBase: new URL("https://kaiquealves.netlify.app"),
+  metadataBase: new URL(site.url),
   openGraph: {
     title: site.fullName,
     description: site.description,
@@ -43,7 +36,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en" className={sans.variable}>
       <body>
         <SiteHeader />
         {children}

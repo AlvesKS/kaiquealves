@@ -76,8 +76,7 @@ export function SiteHeader() {
             </a>
           ))}
         </div>
-        <form className="site-search" action="https://www.google.com/search" method="get">
-          <input type="hidden" name="sitesearch" value="kaiquealves.netlify.app" />
+        <form className="site-search" action="/search/" method="get">
           <label>
             <span>Search</span>
             <input name="q" type="search" placeholder="Search" />

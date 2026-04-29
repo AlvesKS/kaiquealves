@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Kaique Alves Blog"
-  site-url: https://kaiquealves.netlify.app/blog
+  site-url: https://alvesks.com.br/blog
   description: "Technical notes and tutorials in plant disease epidemiology, modeling, and quantitative plant pathology."
   favicon: ../public/images/kaique-alves.jpg
   search: true
@@ -39,7 +39,7 @@ website:
         aria-label: Google Scholar
   page-footer:
     left: "Technical writing in quantitative plant pathology."
-    right: "Back to portfolio: kaiquealves.netlify.app"
+    right: "Back to portfolio: alvesks.com.br"
 
 format:
   html:

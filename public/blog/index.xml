@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Kaique Alves Blog</title>
-<link>https://kaiquealves.netlify.app/blog/</link>
-<atom:link href="https://kaiquealves.netlify.app/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://alvesks.com.br/blog/</link>
+<atom:link href="https://alvesks.com.br/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Technical notes and tutorials in plant disease epidemiology, modeling, and quantitative plant pathology.</description>
 <generator>quarto-1.6.40</generator>
 <lastBuildDate>Sun, 12 Apr 2026 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Simulating epidemics with epifitter: initial inoculum and infection rate</title>
   <dc:creator>Kaique Alves</dc:creator>
-  <link>https://kaiquealves.netlify.app/blog/posts/epifitter-epidemias/epifitter-epidemias.html</link>
+  <link>https://alvesks.com.br/blog/posts/epifitter-epidemias/epifitter-epidemias.html</link>
   <description><![CDATA[ 
 
 
@@ -249,7 +249,7 @@ font-style: inherit;">background_grid</span>()</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
+<p><img src="https://alvesks.com.br/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
@@ -447,7 +447,7 @@ font-style: inherit;">background_grid</span>()</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
+<p><img src="https://alvesks.com.br/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
@@ -634,7 +634,7 @@ font-style: inherit;">"Disease intensity"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+<p><img src="https://alvesks.com.br/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -862,7 +862,7 @@ font-style: inherit;">"B"</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1152"></p>
+<p><img src="https://alvesks.com.br/blog/posts/epifitter-epidemias/epifitter-epidemias_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1152"></p>
 </figure>
 </div>
 </div>
@@ -900,13 +900,13 @@ font-style: inherit;">"B"</span>))</span></code></pre></div>
   <category>epifitter</category>
   <category>simulation</category>
   <category>plant pathology</category>
-  <guid>https://kaiquealves.netlify.app/blog/posts/epifitter-epidemias/epifitter-epidemias.html</guid>
+  <guid>https://alvesks.com.br/blog/posts/epifitter-epidemias/epifitter-epidemias.html</guid>
   <pubDate>Sun, 12 Apr 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Modeling plant disease yield loss: attainable yield, slope, damage coefficient, mixed-effects models, and meta-analysis</title>
   <dc:creator>Kaique Alves</dc:creator>
-  <link>https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss.html</link>
+  <link>https://alvesks.com.br/blog/posts/yield-loss/yield-loss.html</link>
   <description><![CDATA[ 
 
 
@@ -1368,7 +1368,7 @@ font-style: inherit;">5.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="652"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="652"></p>
 </figure>
 </div>
 </div>
@@ -1548,7 +1548,7 @@ font-style: inherit;">5.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="652"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="652"></p>
 </figure>
 </div>
 </div>
@@ -1728,7 +1728,7 @@ font-style: inherit;">5.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="652"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="652"></p>
 </figure>
 </div>
 </div>
@@ -2232,7 +2232,7 @@ font-style: inherit;">"top"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="816"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="816"></p>
 </figure>
 </div>
 </div>
@@ -2906,7 +2906,7 @@ font-style: inherit;">"Yield (kg/ha)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="681"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="681"></p>
 </figure>
 </div>
 </div>
@@ -2983,7 +2983,7 @@ font-style: inherit;">"Yield (kg/ha)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="681"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="681"></p>
 </figure>
 </div>
 </div>
@@ -3081,7 +3081,7 @@ font-style: inherit;">"Yield (kg/ha)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="681"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="681"></p>
 </figure>
 </div>
 </div>
@@ -4148,7 +4148,7 @@ font-style: inherit;">"Yield (kg/ha)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="806"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="806"></p>
 </figure>
 </div>
 </div>
@@ -4236,7 +4236,7 @@ font-style: inherit;">"Yield (kg/ha)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="806"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="806"></p>
 </figure>
 </div>
 </div>
@@ -4419,7 +4419,7 @@ font-style: inherit;">5.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="806"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="806"></p>
 </figure>
 </div>
 </div>
@@ -4603,7 +4603,7 @@ font-style: inherit;">5.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="806"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="806"></p>
 </figure>
 </div>
 </div>
@@ -4940,7 +4940,7 @@ font-style: inherit;">"Yield (kg/ha)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="825"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="825"></p>
 </figure>
 </div>
 </div>
@@ -5216,7 +5216,7 @@ font-style: inherit;">NULL</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="825"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="825"></p>
 </figure>
 </div>
 </div>
@@ -5493,7 +5493,7 @@ font-style: inherit;">"Relative yield loss (%)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="825"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="825"></p>
 </figure>
 </div>
 </div>
@@ -5852,7 +5852,7 @@ font-style: inherit;">"Relative yield loss (%)"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="825"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="825"></p>
 </figure>
 </div>
 </div>
@@ -5929,7 +5929,7 @@ font-style: inherit;">"Count"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="825"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="825"></p>
 </figure>
 </div>
 </div>
@@ -6417,7 +6417,7 @@ font-style: inherit;">"none"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="691"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="691"></p>
 </figure>
 </div>
 </div>
@@ -6640,7 +6640,7 @@ font-style: inherit;">"none"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="652"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="652"></p>
 </figure>
 </div>
 </div>
@@ -6917,7 +6917,7 @@ font-style: inherit;">"Method"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="748"></p>
+<p><img src="https://alvesks.com.br/blog/posts/yield-loss/yield-loss_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="748"></p>
 </figure>
 </div>
 </div>
@@ -6968,13 +6968,13 @@ font-style: inherit;">"Method"</span></span>
   <category>yield loss</category>
   <category>mixed models</category>
   <category>meta-analysis</category>
-  <guid>https://kaiquealves.netlify.app/blog/posts/yield-loss/yield-loss.html</guid>
+  <guid>https://alvesks.com.br/blog/posts/yield-loss/yield-loss.html</guid>
   <pubDate>Sun, 12 Apr 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Fungal sensitivity to fungicides in R</title>
   <dc:creator>Kaique Alves</dc:creator>
-  <link>https://kaiquealves.netlify.app/blog/posts/ec50/ec50.html</link>
+  <link>https://alvesks.com.br/blog/posts/ec50/ec50.html</link>
   <description><![CDATA[ 
 
 
@@ -7257,7 +7257,7 @@ font-style: inherit;">"none"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="https://alvesks.com.br/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -7318,7 +7318,7 @@ font-style: inherit;">plot</span>(model1)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="https://alvesks.com.br/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -7993,7 +7993,7 @@ font-style: inherit;">" across production systems"</span>)</span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
+<p><img src="https://alvesks.com.br/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
@@ -8098,7 +8098,7 @@ font-style: inherit;">" values"</span>)</span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://kaiquealves.netlify.app/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="768"></p>
+<p><img src="https://alvesks.com.br/blog/posts/ec50/ec50_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
@@ -8124,7 +8124,7 @@ font-style: inherit;">" values"</span>)</span>
   <category>plant pathology</category>
   <category>code</category>
   <category>analysis</category>
-  <guid>https://kaiquealves.netlify.app/blog/posts/ec50/ec50.html</guid>
+  <guid>https://alvesks.com.br/blog/posts/ec50/ec50.html</guid>
   <pubDate>Sun, 08 May 2022 03:00:00 GMT</pubDate>
 </item>
 </channel>

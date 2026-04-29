@@ -1,1 +1,1 @@
-Sitemap: https://kaiquealves.netlify.app/blog/sitemap.xml
+Sitemap: https://alvesks.com.br/blog/sitemap.xml
