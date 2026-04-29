@@ -10,7 +10,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/kaique-alves-ab253436/",
     github: "https://github.com/AlvesKS",
     x: "https://x.com/alvesks_",
-    scholar: "https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&hl=en"
+    scholar: "https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&hl=pt-BR&authuser=1"
   }
 };
 

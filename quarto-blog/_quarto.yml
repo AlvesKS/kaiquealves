@@ -34,6 +34,9 @@ website:
       - icon: github
         href: https://github.com/AlvesKS
         aria-label: GitHub
+      - icon: mortarboard
+        href: https://scholar.google.com.br/citations?user=wTzslqsAAAAJ&hl=pt-BR&authuser=1
+        aria-label: Google Scholar
   page-footer:
     left: "Technical writing in quantitative plant pathology."
     right: "Back to portfolio: kaiquealves.netlify.app"
