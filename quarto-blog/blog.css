@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;760;800&display=swap");
 
 :root {
-  --paper: #f3f6f7;
-  --ink: #14212b;
-  --muted: #5f717b;
-  --line: rgba(20, 33, 43, 0.14);
-  --green: #5b8c78;
-  --blue: #246a8d;
-  --clay: #d99a2b;
+  --paper: #f4f7f5;
+  --ink: #18252b;
+  --muted: #6d8794;
+  --line: rgba(24, 37, 43, 0.14);
+  --green: #1f7a78;
+  --blue: #3a7f96;
+  --clay: #b8663b;
 }
 
 html {
@@ -18,21 +18,21 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 12% 8%, rgba(36, 106, 141, 0.15), transparent 28rem),
-    radial-gradient(circle at 88% 18%, rgba(91, 140, 120, 0.15), transparent 24rem),
-    linear-gradient(180deg, #fbfdfe 0%, var(--paper) 44%, #eaf1f3 100%);
+    radial-gradient(circle at 10% 6%, rgba(31, 122, 120, 0.14), transparent 26rem),
+    radial-gradient(circle at 86% 12%, rgba(58, 127, 150, 0.15), transparent 26rem),
+    linear-gradient(180deg, #fbfcfb 0%, var(--paper) 44%, #e8f0ee 100%);
   font-family: "Inter", sans-serif;
 }
 
 a {
   color: inherit;
-  text-decoration-color: rgba(36, 106, 141, 0.38);
+  text-decoration-color: rgba(31, 122, 120, 0.38);
   text-underline-offset: 0.22em;
 }
 
 a:hover {
-  color: var(--blue);
-  text-decoration-color: var(--blue);
+  color: var(--green);
+  text-decoration-color: var(--green);
 }
 
 h1,
@@ -87,7 +87,7 @@ h4,
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--blue) !important;
+  color: var(--green) !important;
 }
 
 .navbar .quarto-navbar-tools {
@@ -101,7 +101,7 @@ h4,
 
 .navbar .quarto-navigation-tool:hover,
 .navbar .navbar-nav.ms-auto .nav-link:hover {
-  color: var(--blue) !important;
+  color: var(--green) !important;
 }
 
 #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon,
@@ -121,9 +121,9 @@ h4,
 }
 
 .aa-DetachedSearchButton:hover {
-  border-color: rgba(36, 106, 141, 0.5);
+  border-color: rgba(31, 122, 120, 0.5);
   background: rgba(255, 255, 255, 0.86);
-  color: var(--blue);
+  color: var(--green);
 }
 
 .quarto-title-banner {
@@ -215,10 +215,38 @@ table {
 
   .navbar > .container-fluid {
     align-items: flex-start;
+    padding: 0.95rem 1rem 1rem;
   }
 
   .navbar-nav {
     gap: 0.85rem;
     margin-top: 0.8rem;
+  }
+
+  #quarto-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .aa-DetachedSearchButton {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 0.7rem;
+    padding: 0.62rem 0.9rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .quarto-title h1.title {
+    font-size: 2.55rem;
+    line-height: 1;
+  }
+
+  main.content {
+    line-height: 1.65;
+  }
+
+  main.content h2 {
+    font-size: 1.55rem;
   }
 }
